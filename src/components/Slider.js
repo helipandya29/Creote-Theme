@@ -63,8 +63,8 @@ const Slider = () => {
             </div>
           </div>
         </div>
-        ))}
-        {users.length > 0 && users.map(user =>(
+      ))}
+      {users.length > 0 && users.map(user =>(
         <div className="slide-item" key={user._id}>
           <div className="slide-item-content content_left">
             <div className="image-layer" style={{backgroundImage: `url(${imageUrl4})`}}></div>
@@ -87,7 +87,7 @@ const Slider = () => {
             </div>
           </div>
         </div>
-        ))}
+      ))}
       </div>
     </section>
   );
