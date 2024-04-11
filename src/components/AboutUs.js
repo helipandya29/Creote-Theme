@@ -1,9 +1,9 @@
 import React from "react";
-
+import SecondHeader from "./SecondHeader";
 const AboutUs = () =>{
     return(
-      <div id="page" className="page_wapper hfeed site">
-      
+      <div id="page" className="page_wapper hfeed site" style={{marginTop : "100px"}}>
+      <SecondHeader page="About Us" />
       <div id="wrapper_full" className="content_all_warpper">
          
          <div id="content" className="site-content ">

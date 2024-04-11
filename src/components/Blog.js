@@ -1,8 +1,10 @@
 import React from "react";
+import SecondHeader from "./SecondHeader";
 
 const Blog = () => {
   return (
-    <div id="content" className="site-content ">
+    <div id="content" className="site-content " style={{marginTop : "100px"}}>
+      <SecondHeader page="Blogs" />
       {/* <!---blog---> */}
       <section className="blog-section">
         {/* <!--===============spacing==============--> */}
