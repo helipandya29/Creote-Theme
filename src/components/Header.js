@@ -167,7 +167,7 @@ const Header = () => {
                           </li>
                           <li className="menu-item  nav-item">
                             <Link
-                              to="contact.html"
+                              to="/contact"
                               className="dropdown-item nav-link"
                             >
                               <span>Contact</span>

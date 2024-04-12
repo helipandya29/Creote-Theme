@@ -3,8 +3,7 @@ import SecondHeader from "./SecondHeader";
 
 const Blog = () => {
   return (
-    <div id="content" className="site-content " style={{marginTop : "100px"}}>
-      <SecondHeader page="Blogs" />
+    <div id="content" className="site-content " style={{marginTop : "40px"}}>
       {/* <!---blog---> */}
       <section className="blog-section">
         {/* <!--===============spacing==============--> */}

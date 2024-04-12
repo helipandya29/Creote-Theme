@@ -23,6 +23,7 @@ import ServiceDefault from "./components/ServiceDefault.js";
 import ServiceDetails from "./components/ServiceDetails.js";
 import PricingPackages from "./components/PricingPackages.js";
 import Faqs from "./components/Faqs.js";
+import Contact from "./components/Contact.js";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -41,6 +42,7 @@ const router = createBrowserRouter(
       <Route path="serviceDetails" element={<ServiceDetails />} />
       <Route path="pricingPackages" element={<PricingPackages />} />
       <Route path="faqs" element={<Faqs/>} />
+      <Route path="contact" element={<Contact/>} />
     </Route>
   )
 );
