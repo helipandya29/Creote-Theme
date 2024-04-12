@@ -1,9 +1,8 @@
 import React from "react";
-import SecondHeader from "./SecondHeader";
 
 const Blog = () => {
   return (
-    <div id="content" className="site-content " style={{marginTop : "40px"}}>
+    <div id="content" className="site-content ">
       {/* <!---blog---> */}
       <section className="blog-section">
         {/* <!--===============spacing==============--> */}
@@ -38,7 +37,7 @@ const Blog = () => {
                           className="img-fluid"
                           alt="img"
                         />
-                        <a href="#" className="categories">
+                        <a href="/" className="categories">
                           <i className="icon-folder"></i>Coaching
                         </a>
                       </div>
@@ -88,7 +87,7 @@ const Blog = () => {
                           className="img-fluid"
                           alt="img"
                         />
-                        <a href="#" className="categories">
+                        <a href="/" className="categories">
                           <i className="icon-folder"></i>Employee Relations
                         </a>
                       </div>
@@ -108,7 +107,7 @@ const Blog = () => {
                             How well this mistaken ideas off denouncing pleasure
                             &amp; praisings will give you complete.
                           </p>
-                          <a href="#" className="link__go">
+                          <a href="/" className="link__go">
                             Read more
                           </a>
                         </div>
@@ -138,7 +137,7 @@ const Blog = () => {
         {/* <!--===============spacing==============--> */}
       </section>
       {/* <!---blog-end---> */}
-      </div>
+    </div>
   );
 };
 

@@ -397,12 +397,12 @@ const Header = () => {
                         <ul className="dropdown-menu">
                           <li className="menu-item nav-item">
                             <Link to="/blog" className="dropdown-item nav-link">
-                              <span>Blog classNameic</span>
+                              <span>Blog Classic</span>
                             </Link>
                           </li>
                           <li className="menu-item  nav-item">
                             <Link
-                              to="blog-modern.html"
+                              to="/blogModern"
                               className="dropdown-item nav-link"
                             >
                               <span>Blog Modern</span>
@@ -410,7 +410,7 @@ const Header = () => {
                           </li>
                           <li className="menu-item  nav-item">
                             <Link
-                              to="blog-simple.html"
+                              to="/blogSimple"
                               className="dropdown-item nav-link"
                             >
                               <span>Blog Simple</span>
@@ -418,7 +418,7 @@ const Header = () => {
                           </li>
                           <li className="menu-item  nav-item">
                             <Link
-                              to="blog-list-view.html"
+                              to="/blogListView"
                               className="dropdown-item nav-link"
                             >
                               <span>Blog List View</span>
@@ -426,7 +426,7 @@ const Header = () => {
                           </li>
                           <li className="menu-item  nav-item">
                             <Link
-                              to="blog-metro-fullwidth.html"
+                              to="/blogMetro"
                               className="dropdown-item nav-link"
                             >
                               <span>Metro Fullwidth</span>
@@ -434,7 +434,7 @@ const Header = () => {
                           </li>
                           <li className="menu-item nav-item">
                             <Link
-                              to="blog-single.html"
+                              to="/blogSinglePost"
                               className="dropdown-item nav-link"
                             >
                               <span>Single Post</span>

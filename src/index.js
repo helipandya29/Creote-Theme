@@ -15,7 +15,6 @@ import Team from "./components/Team";
 import TabSection from "./components/Tab";
 import Price from "./components/Price";
 import TestimonialSection from "./components/TestimonialSection";
-import Blog from "./components/Blog";
 import OurTeam from "./components/OurTeam.js";
 import AboutUs from "./components/AboutUs.js";
 import ServiceClassic from "./components/ServiceClassic.js"
@@ -24,6 +23,12 @@ import ServiceDetails from "./components/ServiceDetails.js";
 import PricingPackages from "./components/PricingPackages.js";
 import Faqs from "./components/Faqs.js";
 import Contact from "./components/Contact.js";
+import BlogClassic from "./components/BlogClassic.js";
+import BlogModern from "./components/BlogModern.js";
+import BlogSimple from "./components/BlogSimple.js";
+import BlogListView from "./components/BlogListView.js";
+import BlogMetro from "./components/BlogMetro.js";
+import BlogSinglePost from "./components/BlogSinglePost.js";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -34,7 +39,6 @@ const router = createBrowserRouter(
       <Route path="tabSection" element={<TabSection />} />
       <Route path="price" element={<Price />} />
       <Route path="testimonial" element={<TestimonialSection />} />
-      <Route path="blog" element={<Blog />} />
       <Route path="ourTeam" element={<OurTeam />} />
       <Route path="aboutUs" element={<AboutUs />} />
       <Route path="serviceClassic" element={<ServiceClassic />} />
@@ -43,6 +47,12 @@ const router = createBrowserRouter(
       <Route path="pricingPackages" element={<PricingPackages />} />
       <Route path="faqs" element={<Faqs/>} />
       <Route path="contact" element={<Contact/>} />
+      <Route path="blog" element={<BlogClassic/>} />
+      <Route path="blogModern" element={<BlogModern/>} />
+      <Route path="blogSimple" element={<BlogSimple/>} />
+      <Route path="blogListView" element={<BlogListView/>} />
+      <Route path="blogMetro" element={<BlogMetro/>} />
+      <Route path="blogSinglePost" element={<BlogSinglePost/>} />
     </Route>
   )
 );
