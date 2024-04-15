@@ -1,7 +1,7 @@
  import React from "react";
  const BlogSinglePost = () =>{
      return(      
-        <div>
+        <div style={{marginTop : "40px"}}>
         <div class="page_header_default style_one blog_single_pageheader">
         <div class="parallax_cover">
            <div class="simpleParallax"><img src="assets/images/page-header-default.jpg" alt="bg_image" class="img-fluid"/></div>
