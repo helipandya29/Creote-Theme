@@ -21,19 +21,19 @@ const TabSection = () => {
                                 <div className="tabs_header clearfix">
                                     <ul className="showcase_tabs_btns nav-pills nav   clearfix">
                                         <li className="nav-item">
-                                            <a className="s_tab_btn nav-link active" data-tab="#tabtabone">01. Affordable</a>
+                                            <a href="/" className="s_tab_btn nav-link active" data-tab="#tabtabone">01. Affordable</a>
                                         </li>
                                         <li className="nav-item">
-                                            <a className="s_tab_btn nav-link" data-tab="#tabtabtwo">02. Knowledge</a>
+                                            <a href="/" className="s_tab_btn nav-link" data-tab="#tabtabtwo">02. Knowledge</a>
                                         </li>
                                         <li className="nav-item">
-                                            <a className="s_tab_btn nav-link" data-tab="#tabtabthree">03. Saves Time</a>
+                                            <a href="/" className="s_tab_btn nav-link" data-tab="#tabtabthree">03. Saves Time</a>
                                         </li>
                                         <li className="nav-item">
-                                            <a className="s_tab_btn nav-link" data-tab="#tabtabtfour">04. Fast &amp; Quality</a>
+                                            <a href="/" className="s_tab_btn nav-link" data-tab="#tabtabtfour">04. Fast &amp; Quality</a>
                                         </li>
                                         <li className="nav-item">
-                                            <a className="s_tab_btn nav-link" data-tab="#tabtabfive">05. Experienced</a>
+                                            <a href="/" className="s_tab_btn nav-link" data-tab="#tabtabfive">05. Experienced</a>
                                         </li>
                                     </ul>
                                     <div className="toll_free">
@@ -48,7 +48,7 @@ const TabSection = () => {
                                                     <h6>Why Creote</h6>
                                                     <h2>Affordable &amp; Flexible</h2>
                                                     <p>Must explain too you how all this mistaken idea of denouncing pleasures praising pain was born and we will give you complete account of the system the actual teachings of the great explorer.</p>
-                                                    <a href="#" target="_blank" rel="nofollow" className="rd_more">Read More <i className="icon-right-arrow"></i></a>
+                                                    <a href="/" target="_blank" rel="nofollow" className="rd_more">Read More <i className="icon-right-arrow"></i></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -58,7 +58,7 @@ const TabSection = () => {
                                                     <h6>Why Creote</h6>
                                                     <h2>Affordable &amp; Flexible</h2>
                                                     <p>Must explain too you how all this mistaken idea of denouncing pleasures praising pain was born and we will give you complete account of the system the actual teachings of the great explorer.</p>
-                                                    <a href="#" target="_blank" rel="nofollow" className="rd_more">Read More <i className="icon-right-arrow"></i></a>
+                                                    <a href="/" target="_blank" rel="nofollow" className="rd_more">Read More <i className="icon-right-arrow"></i></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -68,7 +68,7 @@ const TabSection = () => {
                                                     <h6>Why Creote</h6>
                                                     <h2>Affordable &amp; Flexible</h2>
                                                     <p>Must explain too you how all this mistaken idea of denouncing pleasures praising pain was born and we will give you complete account of the system the actual teachings of the great explorer.</p>
-                                                    <a href="#" target="_blank" rel="nofollow" className="rd_more">Read More <i className="icon-right-arrow"></i></a>
+                                                    <a href="/" target="_blank" rel="nofollow" className="rd_more">Read More <i className="icon-right-arrow"></i></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -78,7 +78,7 @@ const TabSection = () => {
                                                     <h6>Why Creote</h6>
                                                     <h2>Affordable &amp; Flexible</h2>
                                                     <p>Must explain too you how all this mistaken idea of denouncing pleasures praising pain was born and we will give you complete account of the system the actual teachings of the great explorer.</p>
-                                                    <a href="#" target="_blank" rel="nofollow" className="rd_more">Read More <i className="icon-right-arrow"></i></a>
+                                                    <a href="/" target="_blank" rel="nofollow" className="rd_more">Read More <i className="icon-right-arrow"></i></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -88,7 +88,7 @@ const TabSection = () => {
                                                     <h6>Why Creote</h6>
                                                     <h2>Affordable &amp; Flexible</h2>
                                                     <p>Must explain too you how all this mistaken idea of denouncing pleasures praising pain was born and we will give you complete account of the system the actual teachings of the great explorer.</p>
-                                                    <a href="#" target="_blank" rel="nofollow" className="rd_more">Read More <i className="icon-right-arrow"></i></a>
+                                                    <a href="/" target="_blank" rel="nofollow" className="rd_more">Read More <i className="icon-right-arrow"></i></a>
                                                 </div>
                                             </div>
                                         </div>

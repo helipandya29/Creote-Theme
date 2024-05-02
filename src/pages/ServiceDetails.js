@@ -1,5 +1,5 @@
 import React from "react";
-import SecondHeader from "./SecondHeader";
+import SecondHeader from "../components/SecondHeader";
 
 const ServiceDetails = () =>{
     return(
@@ -42,7 +42,7 @@ const ServiceDetails = () =>{
                                       <div className="pd_bottom_25"></div>
                                       {/* <!--===============spacing==============--> */}
                                       <div className="simple_image_boxes">
-                                         <img src="assets/images/blog/single-post-gal-1.jpg" className="object-fit-cover-center height_570px" alt="image"/>
+                                         <img src="assets/images/blog/single-post-gal-1.jpg" className="object-fit-cover-center height_570px" alt=""/>
                                       </div>
                                
                                    </div>
@@ -199,7 +199,7 @@ y                               {/* <!--===============spacing==============--> 
                                          <div className="color_white_1 clearfix">
                                             <a href="/" className="theme-btn color_white_1 one">Download</a>
                                          </div>
-                                         <img src="assets/images/broucher-img.jpg" alt="image"/>
+                                         <img src="assets/images/broucher-img.jpg" alt=""/>
                                       </div>
                                    
                                 </div>

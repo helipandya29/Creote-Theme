@@ -21,9 +21,9 @@ const HumanResource =()=>{
                 <div className="content_inner">
                   <span className="icon-dollar"><i></i></span>
                   <small className="nom">01</small>
-                  <h2><a href="#">Employee Compensation </a></h2>
+                  <h2><a href="/">Employee Compensation </a></h2>
                   <p>Holds in these matters principles selection right rejects.</p>
-                  <a href="#" className="read_more">Read more <i className="icon-right-arrow"></i></a>
+                  <a href="/" className="read_more">Read more <i className="icon-right-arrow"></i></a>
                 </div>
               </div>
             </div>
@@ -35,9 +35,9 @@ const HumanResource =()=>{
                 <div className="content_inner">
                   <span className="icon-pharmacy"><i></i></span>
                   <small className="nom">02</small>
-                  <h2><a href="#">Health Care Benefits</a></h2>
+                  <h2><a href="/">Health Care Benefits</a></h2>
                   <p>The great explorer of the truth the master builders human happiness.</p>
-                  <a href="#" className="read_more">Read more <i className="icon-right-arrow"></i></a>
+                  <a href="/" className="read_more">Read more <i className="icon-right-arrow"></i></a>
                 </div>
               </div>
             </div>
@@ -49,9 +49,9 @@ const HumanResource =()=>{
                 <div className="content_inner">
                   <span className="icon-service"><i></i></span>
                   <small className="nom">03</small>
-                  <h2><a href="#">Talent Management</a></h2>
+                  <h2><a href="/">Talent Management</a></h2>
                   <p>Laborious physo except obtains some advantage from it right.</p>
-                  <a href="#" className="read_more">Read more <i className="icon-right-arrow"></i></a>
+                  <a href="/" className="read_more">Read more <i className="icon-right-arrow"></i></a>
                 </div>
               </div>
             </div>
@@ -63,9 +63,9 @@ const HumanResource =()=>{
                 <div className="content_inner">
                   <span className=" icon-dollar"><i></i></span>
                   <small className="nom">04</small>
-                  <h2><a href="#">Risk Management</a></h2>
+                  <h2><a href="/">Risk Management</a></h2>
                   <p>Right to find fault with a mans who chooses enjoy has no annoying.</p>
-                  <a href="#" className="read_more">Read more <i className="icon-right-arrow"></i></a>
+                  <a href="/" className="read_more">Read more <i className="icon-right-arrow"></i></a>
                 </div>
               </div>
             </div>

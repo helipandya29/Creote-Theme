@@ -1,5 +1,5 @@
 import React from "react";
-import SecondHeader from "./SecondHeader";
+import SecondHeader from "../components/SecondHeader";
 import { Link } from "react-router-dom";
 const BlogListView = () =>{
     return(

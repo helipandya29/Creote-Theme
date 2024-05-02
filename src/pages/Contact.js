@@ -1,5 +1,5 @@
 import React from "react";
-import SecondHeader from "./SecondHeader";
+import SecondHeader from "../components/SecondHeader";
 
 const Contact = () => {
   return (
@@ -19,7 +19,6 @@ const Contact = () => {
                       id="contact-form"
                       method="post"
                       action="contact.php"
-                      role="form"
                     >
                       <div className="messages"></div>
 

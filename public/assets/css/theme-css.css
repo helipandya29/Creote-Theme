@@ -30202,8 +30202,8 @@ body.side_menu_toggled .style-switcher {
     line-height: 56px;
   }
   .woocommerce .woocommerce-error .button, .woocommerce .woocommerce-info .button, .woocommerce .woocommerce-message .button, .woocommerce-page .woocommerce-error .button, .woocommerce-page .woocommerce-info .button, .woocommerce-page .woocommerce-message .button {
-    float: unset !important;
     display: inline-block;
+    float: none !important;
     width: 100%;
   }
   .image_box_new.type_two .image.one {

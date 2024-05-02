@@ -20,11 +20,11 @@ const Service = () => {
               <div className="service_box style_four dark_color">
                 <div className="service_content">
                   <div className="image_box">
-                    <img src="assets/images/project-6-img.jpg" className="img-fluid" alt="Service Image" />
+                    <img src="assets/images/project-6-img.jpg" className="img-fluid" alt=""/>
                     <span className="icon-video-player"></span>
                   </div>
                   <div className="content_inner">
-                    <h2><a href="#">Chat With a Live</a></h2>
+                    <h2><a href="/">Chat With a Live</a></h2>
                     <p>Live Chat</p>
                   </div>
                 </div>
@@ -35,11 +35,11 @@ const Service = () => {
               <div className="service_box style_four dark_color">
                 <div className="service_content">
                   <div className="image_box">
-                    <img src="assets/images/about-12.jpg" className="img-fluid" alt="Service Image" />
+                    <img src="assets/images/about-12.jpg" className="img-fluid" alt=""/>
                     <span className="icon-businessman-1"></span>
                   </div>
                   <div className="content_inner">
-                    <h2><a href="#">Ask Professionals</a></h2>
+                    <h2><a href="/">Ask Professionals</a></h2>
                     <p>our Team</p>
                   </div>
                 </div>
@@ -50,11 +50,11 @@ const Service = () => {
               <div className="service_box style_four dark_color">
                 <div className="service_content">
                   <div className="image_box">
-                    <img src="assets/images/blog-image-10.jpg" className="img-fluid" alt="Service Image" />
+                    <img src="assets/images/blog-image-10.jpg" className="img-fluid" alt=""/>
                     <span className=" icon-development"></span>
                   </div>
                   <div className="content_inner">
-                    <h2><a href="#">Support to Grow</a></h2>
+                    <h2><a href="/">Support to Grow</a></h2>
                     <p>User Guides</p>
                   </div>
                 </div>
@@ -73,7 +73,7 @@ const Service = () => {
           <div className="row">
             <div className="col-xl-6 col-lg-12 mb-5 mb-lg-5 mb-xl-0">
               <div className="image_boxes style_three">
-                <img src="assets/images/about-8.jpg" className="img-fluid height_500 object-fit-cover" alt="image" />
+                <img src="assets/images/about-8.jpg" className="img-fluid height_500 object-fit-cover" alt="" />
                 <div className="video_box">
                   <a href="https://www.youtube.com/embed/-VK0axfge4A" className="lightbox-image"><i className="icon-play"></i></a>
                 </div>
@@ -111,7 +111,7 @@ const Service = () => {
               <div className="row">
                 <div className="col-lg-4 col-md-4 col-sm-12">
                   <div className="theme_btn_all color_one">
-                    <a href="#" target="_blank" rel="nofollow" className="theme-btn one">Download</a>
+                    <a href="/" target="_blank" rel="nofollow" className="theme-btn one">Download</a>
                   </div>
                 </div>
                 <div className="col-lg-8 col-md-8 col-sm-12">

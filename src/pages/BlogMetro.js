@@ -1,5 +1,5 @@
 import React from "react";
-import SecondHeader from "./SecondHeader";
+import SecondHeader from "../components/SecondHeader";
 const imageUrl1= 'assets/images/blog-image-11.jpg';
 const imageUrl2= 'assets/images/blog-image-3.jpg';
 const imageUrl3= 'assets/images/blog-image-9.jpg';

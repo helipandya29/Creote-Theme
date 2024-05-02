@@ -379,7 +379,7 @@
     
     .woocommerce form .show-password-input::after,.woocommerce-page form .show-password-input::after {
     font-family:WooCommerce;
-    speak:never;
+    speak-as:never;
     font-weight:400;
     font-variant:normal;
     text-transform:none;

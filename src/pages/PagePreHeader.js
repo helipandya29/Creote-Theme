@@ -5,26 +5,26 @@ const PagePreHeader = () => {
   return (
     <div id="page" className="page_wapper hfeed site">
       <div className="style-switcher">
-        <a href="#" id="switcher-toggler"><i className="fa fa-cog"></i></a>
+        <a href="/" id="switcher-toggler"><i className="fa fa-cog"></i></a>
         <h3>Color Skins</h3>
         <ul id="colorschemeOptions" title="Switch Color" data-css-path="assets/css/scss/elements/color-switcher/">
           <li>
-            <a href="#" data-theme="color" style={{ backgroundColor: "#078586" }}> </a>
+            <a href="/" data-theme="color" style={{ backgroundColor: "#078586" }}> </a>
           </li>
           <li>
-            <a href="#" data-theme="color1" style={{ backgroundColor: "#e5102a" }}> </a>
+            <a href="/" data-theme="color1" style={{ backgroundColor: "#e5102a" }}> </a>
           </li>
           <li>
-            <a href="#" data-theme="color2" style={{ backgroundColor: "#3ead3c" }}> </a>
+            <a href="/" data-theme="color2" style={{ backgroundColor: "#3ead3c" }}> </a>
           </li>
           <li>
-            <a href="#" data-theme="color3" style={{ backgroundColor: "#fed000" }}> </a>
+            <a href="/" data-theme="color3" style={{ backgroundColor: "#fed000" }}> </a>
           </li>
           <li>
-            <a href="#" data-theme="color4" style={{ backgroundColor: "#ff5538" }}> </a>
+            <a href="/" data-theme="color4" style={{ backgroundColor: "#ff5538" }}> </a>
           </li>
           <li>
-            <a href="#" data-theme="color5" style={{ backgroundColor: "#246af4" }}> </a>
+            <a href="/" data-theme="color5" style={{ backgroundColor: "#246af4" }}> </a>
           </li>
         </ul>
       </div>

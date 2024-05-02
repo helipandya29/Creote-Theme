@@ -57,7 +57,7 @@ const Footer = () => {
                 <div className="footer_widgets about_company light_color">
                   <div className="about_company_inner">
                     <div className="footer_logo">
-                      <a href="#" target="_blank" rel="nofollow">
+                      <a href="/" target="_blank" rel="nofollow">
                         <img src="assets/images/logo-white.png" alt="logo" />
                       </a>
                     </div>
@@ -80,7 +80,7 @@ const Footer = () => {
                         <div className="help_con">
                           <h6>Need Help?</h6>
                           <h2>
-                            <a href="#" target="_blank" rel="nofollow">
+                            <a href="/" target="_blank" rel="nofollow">
                               {" "}
                               Free Consultation
                             </a>
@@ -108,22 +108,22 @@ const Footer = () => {
                         <div className="menu-information-container">
                           <ul className="menu">
                             <li className="menu-item">
-                              <a href="#">How it’s Work</a>
+                              <a href="/">How it’s Work</a>
                             </li>
                             <li className="menu-item">
-                              <a href="#">Partners</a>
+                              <a href="/">Partners</a>
                             </li>
                             <li className="menu-item">
-                              <a href="#">Testimonials</a>
+                              <a href="/">Testimonials</a>
                             </li>
                             <li className="menu-item">
-                              <a href="#">Key Areas</a>
+                              <a href="/">Key Areas</a>
                             </li>
                             <li className="menu-item">
-                              <a href="#">Case Studies</a>
+                              <a href="/">Case Studies</a>
                             </li>
                             <li className="menu-item">
-                              <a href="#">Pricing</a>
+                              <a href="/">Pricing</a>
                             </li>
                           </ul>
                         </div>
@@ -146,22 +146,22 @@ const Footer = () => {
                     <div className="navigation_foo_inner">
                       <ul className="menu">
                         <li className="menu-item">
-                          <a href="#">Careers</a>
+                          <a href="/">Careers</a>
                         </li>
                         <li className="menu-item">
-                          <a href="#">Infrastructure</a>
+                          <a href="/">Infrastructure</a>
                         </li>
                         <li className="menu-item">
-                          <a href="#">Client Support</a>
+                          <a href="/">Client Support</a>
                         </li>
                         <li className="menu-item">
-                          <a href="#">Privacy Policy</a>
+                          <a href="/">Privacy Policy</a>
                         </li>
                         <li className="menu-item">
-                          <a href="#">Terms of Use</a>
+                          <a href="/">Terms of Use</a>
                         </li>
                         <li className="menu-item">
-                          <a href="#">Sitemap</a>
+                          <a href="/">Sitemap</a>
                         </li>
                       </ul>
                     </div>
@@ -231,12 +231,12 @@ const Footer = () => {
                 <div className="nav_link_v_one text-md-end">
                   <ul>
                     <li>
-                      <a href="#" target="_blank" rel="nofollow">
+                      <a href="/" target="_blank" rel="nofollow">
                         Terms Of Use
                       </a>
                     </li>
                     <li>
-                      <a href="#" target="_blank" rel="nofollow">
+                      <a href="/" target="_blank" rel="nofollow">
                         Private Policy
                       </a>
                     </li>
@@ -420,7 +420,7 @@ const Footer = () => {
                       those how to pursue pleasures rationally encounter
                       consequences that are extremely painful desires to obtain.
                     </p>
-                    <a href="#">Read More</a>
+                    <a href="/">Read More</a>
                   </div>
                   <div className="post_contet_modal">
                     <h2> Latest News</h2>

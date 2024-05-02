@@ -1,11 +1,12 @@
 import React from "react";
-import SecondHeader from "./SecondHeader";
+import SecondHeader from "../components/SecondHeader";
+import { Link } from "react-router-dom";
 
-const BlogModern = () => {
+const BlogSimple = () => {
   return (
-    <div id="content" className="site-content " style={{ marginTop: "100px" }}>
-      <SecondHeader page="Blog Modern" />
-      <section className="blog_post_section two_column  style_three">
+    <div id="content" className="site-content" style={{ marginTop: "100px" }}>
+      <SecondHeader page="Blog Simple" />
+      <section className="blog_post_section four_column news_wrapper_grid style_six ">
         {/* <!--===============spacing==============--> */}
         <div className="pd_top_90"></div>
         {/* <!--===============spacing==============--> */}
@@ -13,7 +14,7 @@ const BlogModern = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="grid_show_case grid_layout clearfix">
-                <div className="news_box style_two grid_box _card has_images">
+                <div className="news_box style_six grid_box _card has_images">
                   <div className="content_box">
                     <div className="overlay"> </div>
                     <img
@@ -22,16 +23,16 @@ const BlogModern = () => {
                       alt="img"
                     />
                     <div className="category">
-                      <a href="/" className="categories">
+                      <Link to="/" className="categories">
                         <i className="icon-folder"></i>Coaching
-                      </a>
+                      </Link>
                     </div>
                     <div className="content_mid">
                       <span className="date_in_number">October 8, 2023</span>
                       <h2 className="title">
-                        <a href="blog-single.html" rel="bookmark">
+                        <Link to="/blogSinglePost" rel="bookmark">
                           Why Should Business Payroll Outsourcing?
-                        </a>
+                        </Link>
                       </h2>
                     </div>
                     <div className="auhtour_box">
@@ -49,7 +50,7 @@ const BlogModern = () => {
                     </div>
                   </div>
                 </div>
-                <div className="news_box style_two grid_box _card  has_images">
+                <div className="news_box style_six grid_box _card  has_images">
                   <div className="content_box">
                     <div className="overlay"> </div>
                     <img
@@ -58,16 +59,16 @@ const BlogModern = () => {
                       alt="img"
                     />
                     <div className="category">
-                      <a href="/" className="categories">
+                      <Link to="/blogSinglePost" className="categories">
                         <i className="icon-folder"></i>HR Consulting
-                      </a>
+                      </Link>
                     </div>
                     <div className="content_mid">
                       <span className="date_in_number">October 8, 2023</span>
                       <h2 className="title">
-                        <a href="blog-single.html" rel="bookmark">
+                        <Link to="/blogSinglePost" rel="bookmark">
                           Most Employees Support Measures
-                        </a>
+                        </Link>
                       </h2>
                     </div>
                     <div className="auhtour_box">
@@ -80,12 +81,12 @@ const BlogModern = () => {
                       />
                       <div className="contnet_a">
                         <p>POSTED BY</p>
-                        <h4> Evan Thomas</h4>
+                        <h4> Evan Thomas </h4>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="news_box style_two grid_box _card  has_images">
+                <div className="news_box style_six grid_box _card has_images">
                   <div className="content_box">
                     <div className="overlay"> </div>
                     <img
@@ -94,16 +95,16 @@ const BlogModern = () => {
                       alt="img"
                     />
                     <div className="category">
-                      <a href="/" className="categories">
+                      <Link to="/blogSinglePost" className="categories">
                         <i className="icon-folder"></i>Compliance Audits
-                      </a>
+                      </Link>
                     </div>
                     <div className="content_mid">
                       <span className="date_in_number">October 8, 2023</span>
                       <h2 className="title">
-                        <a href="blog-single.html" rel="bookmark">
+                        <Link to="/blogSinglePost" rel="bookmark">
                           How to Handle Employee
-                        </a>
+                        </Link>
                       </h2>
                     </div>
                     <div className="auhtour_box">
@@ -121,7 +122,7 @@ const BlogModern = () => {
                     </div>
                   </div>
                 </div>
-                <div className="news_box style_two grid_box _card  has_images">
+                <div className="news_box style_six grid_box _card has_images">
                   <div className="content_box">
                     <div className="overlay"> </div>
                     <img
@@ -130,22 +131,22 @@ const BlogModern = () => {
                       alt="img"
                     />
                     <div className="category">
-                      <a href="/" className="categories">
+                      <Link to="/blogSinglePost" className="categories">
                         <i className="icon-folder"></i>Coaching
-                      </a>
+                      </Link>
                     </div>
                     <div className="content_mid">
                       <span className="date_in_number">October 8, 2023</span>
                       <h2 className="title">
-                        <a href="blog-single.html" rel="bookmark">
+                        <Link to="/blogSinglePost" rel="bookmark">
                           Retaining Good Employees &amp; Motivated
-                        </a>
+                        </Link>
                       </h2>
                     </div>
                     <div className="auhtour_box">
                       <img
                         alt="img"
-                        src="assets/images/auth-2.png"
+                        src="assets/images/auth-1.png"
                         height="60"
                         width="60"
                         className="img-fluid"
@@ -157,7 +158,7 @@ const BlogModern = () => {
                     </div>
                   </div>
                 </div>
-                <div className="news_box style_two grid_box _card  has_images">
+                <div className="news_box style_six grid_box _card has_images">
                   <div className="content_box">
                     <div className="overlay"> </div>
                     <img
@@ -166,16 +167,16 @@ const BlogModern = () => {
                       alt="img"
                     />
                     <div className="category">
-                      <a href="/" className="categories">
+                      <Link to="/blogSinglePost" className="categories">
                         <i className="icon-folder"></i>Compliance Audits
-                      </a>
+                      </Link>
                     </div>
                     <div className="content_mid">
                       <span className="date_in_number">October 8, 2023</span>
                       <h2 className="title">
-                        <a href="blog-single.html" rel="bookmark">
+                        <Link to="/blogSinglePost" rel="bookmark">
                           Understanding Executive Coaching
-                        </a>
+                        </Link>
                       </h2>
                     </div>
                     <div className="auhtour_box">
@@ -193,7 +194,7 @@ const BlogModern = () => {
                     </div>
                   </div>
                 </div>
-                <div className="news_box style_two grid_box _card  has_images">
+                <div className="news_box style_six grid_box _card has_images">
                   <div className="content_box">
                     <div className="overlay"> </div>
                     <img
@@ -202,16 +203,16 @@ const BlogModern = () => {
                       alt="img"
                     />
                     <div className="category">
-                      <a href="/" className="categories">
+                      <Link to="/blogSinglePost" className="categories">
                         <i className="icon-folder"></i>Coaching
-                      </a>
+                      </Link>
                     </div>
                     <div className="content_mid">
                       <span className="date_in_number">October 8, 2023</span>
                       <h2 className="title">
-                        <a href="blog-single.html" rel="bookmark">
+                        <Link to="/blogSinglePost" rel="bookmark">
                           How to Handle Your Good Employee
-                        </a>
+                        </Link>
                       </h2>
                     </div>
                     <div className="auhtour_box">
@@ -229,7 +230,7 @@ const BlogModern = () => {
                     </div>
                   </div>
                 </div>
-                <div className="news_box style_two grid_box _card  has_images">
+                <div className="news_box style_six grid_box _card has_images">
                   <div className="content_box">
                     <div className="overlay"> </div>
                     <img
@@ -238,16 +239,16 @@ const BlogModern = () => {
                       alt="img"
                     />
                     <div className="category">
-                      <a href="/" className="categories">
+                      <Link to="/blogSinglePost" className="categories">
                         <i className="icon-folder"></i>Employee Relations
-                      </a>
+                      </Link>
                     </div>
                     <div className="content_mid">
                       <span className="date_in_number">October 8, 2023</span>
                       <h2 className="title">
-                        <a href="blog-single.html" rel="bookmark">
+                        <Link to="/blogSinglePost" rel="bookmark">
                           Workforce Challenges &amp; Opportunities
-                        </a>
+                        </Link>
                       </h2>
                     </div>
                     <div className="auhtour_box">
@@ -265,7 +266,7 @@ const BlogModern = () => {
                     </div>
                   </div>
                 </div>
-                <div className="news_box style_two grid_box _card  has_images">
+                <div className="news_box style_six grid_box _card has_images">
                   <div className="content_box">
                     <div className="overlay"> </div>
                     <img
@@ -274,16 +275,16 @@ const BlogModern = () => {
                       alt="img"
                     />
                     <div className="category">
-                      <a href="/" className="categories">
+                      <Link to="/blogSinglePost" className="categories">
                         <i className="icon-folder"></i>Coaching
-                      </a>
+                      </Link>
                     </div>
                     <div className="content_mid">
                       <span className="date_in_number">October 8, 2023</span>
                       <h2 className="title">
-                        <a href="blog-single.html" rel="bookmark">
+                        <Link to="/blogSinglePost" rel="bookmark">
                           Workplace problems in your business?
-                        </a>
+                        </Link>
                       </h2>
                     </div>
                     <div className="auhtour_box">
@@ -313,4 +314,4 @@ const BlogModern = () => {
   );
 };
 
-export default BlogModern;
+export default BlogSimple;

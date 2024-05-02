@@ -1,12 +1,12 @@
 import React from "react";
-import Slider from "./Slider";
-import Service from "./Service";
-import Team from "./Team";
-import TabSection from "./Tab";
-import Price from "./Price";
-import HumanResource from "./HumanResource";
-import Blog from "./Blog";
-import TestimonialSection from "./TestimonialSection";
+import Slider from "../pages/Slider";
+import Service from "../pages/Service";
+import Team from "../pages/Team";
+import TabSection from "../pages/Tab";
+import Price from "../pages/Price";
+import HumanResource from "../pages/HumanResource";
+import Blog from "../pages/Blog";
+import TestimonialSection from "../pages/TestimonialSection";
 
 function Home() {
   return (

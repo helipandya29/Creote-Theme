@@ -15,7 +15,7 @@ const TestimonialSection = () => {
               <img
                 src="assets/images/testi-image.jpg"
                 className="simp_img img-fluid object-fit-cover height_560px"
-                alt="image"
+                alt=""
               />
             </div>
           </div>
@@ -91,7 +91,7 @@ const TestimonialSection = () => {
                         </div>
                         <div className="authour_details  image_yes ">
                           <div className="image">
-                            <img src="assets/images/testi-3.png" alt="image" />
+                            <img src="assets/images/testi-3.png" alt="" />
                           </div>
                           <div className="details">
                             <h2>Jacob Leonardo</h2>
@@ -120,7 +120,7 @@ const TestimonialSection = () => {
                         </div>
                         <div className="authour_details  image_yes ">
                           <div className="image">
-                            <img src="assets/images/testi-2.png" alt="image" />
+                            <img src="assets/images/testi-2.png" alt="" />
                           </div>
                           <div className="details">
                             <h2>Jacob Leonardo</h2>
@@ -149,7 +149,7 @@ const TestimonialSection = () => {
                         </div>
                         <div className="authour_details  image_yes ">
                           <div className="image">
-                            <img src="assets/images/testi-1.png" alt="image" />
+                            <img src="assets/images/testi-1.png" alt="" />
                           </div>
                           <div className="details">
                             <h2>Jacob Leonardo</h2>

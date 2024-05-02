@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import SecondHeader from "./SecondHeader";
+import SecondHeader from "../components/SecondHeader";
 const Team = () => {
   const [specificTeamMembers, setSpecificTeamMembers] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/team-members")
+      .get("http://localhost:5000/teamMembers")
       .then((response) => {
         setSpecificTeamMembers(response.data);
         setLoading(false);

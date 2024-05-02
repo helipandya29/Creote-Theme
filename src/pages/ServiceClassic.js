@@ -1,5 +1,5 @@
 import React from "react";
-import SecondHeader from "./SecondHeader";
+import SecondHeader from "../components/SecondHeader.js";
 import HumanResource from "./HumanResource.js"
 const imageUrl1 = "assets/images/service/service-image-1.png"
 const imageUrl2 = "assets/images/service/service-image-2.png"
@@ -24,7 +24,7 @@ const ServiceclassNameic = () =>{
                               <div className="content_inner" style={{backgroundImage:`url(${imageUrl1})`}}>
                                  <div className="content_inner_in">
                                     <div className="icon_image">
-                                       <img src="assets/images/010-job-search.png" className="img-fluid" alt="Service Image"/>
+                                       <img src="assets/images/010-job-search.png" className="img-fluid" alt=""/>
                                     </div>
                                     <h2>
                                        <a href="/"> Recruitment Process </a>
@@ -57,7 +57,7 @@ const ServiceclassNameic = () =>{
                               <div className="content_inner" style={{backgroundImage: `url(${imageUrl2})`}}>
                                  <div className="content_inner_in">
                                     <div className="icon_image">
-                                       <img src="assets/images/service-ico-1.png" className="img-fluid" alt="Service Image"/>
+                                       <img src="assets/images/service-ico-1.png" className="img-fluid" alt=""/>
                                     </div>
                                     <h2>
                                        <a href="/">Employee Relations</a>
@@ -88,7 +88,7 @@ const ServiceclassNameic = () =>{
                               <div className="content_inner" style={{backgroundImage: `url(${imageUrl3})`}}>
                                  <div className="content_inner_in">
                                     <div className="icon_image">
-                                       <img src="assets/images/service-ico-2.png" className="img-fluid" alt="Service Image"/>
+                                       <img src="assets/images/service-ico-2.png" className="img-fluid" alt=""/>
                                     </div>
                                     <h2>
                                        <a href="/">Compliance Audits</a>
@@ -174,13 +174,13 @@ const ServiceclassNameic = () =>{
                            <div className="tabs_header clearfix">
                               <ul className="showcase_tabs_btns nav-pills nav clearfix">
                                  <li className="nav-item">
-                                    <a className="s_tab_btn nav-link active" data-tab="#tabtabone">01.Benefits</a>
+                                    <a href="/" className="s_tab_btn nav-link active" data-tab="#tabtabone">01.Benefits</a>
                                  </li>
                                  <li className="nav-item">
-                                    <a className="s_tab_btn nav-link" data-tab="#tabtabtwo">02. HR Advice</a>
+                                    <a href="/" className="s_tab_btn nav-link" data-tab="#tabtabtwo">02. HR Advice</a>
                                  </li>
                                  <li className="nav-item">
-                                    <a className="s_tab_btn nav-link" data-tab="#tabtabtwothree">03. HR Audit</a>
+                                    <a href="/" className="s_tab_btn nav-link" data-tab="#tabtabtwothree">03. HR Audit</a>
                                  </li>
                               </ul>
                            </div>

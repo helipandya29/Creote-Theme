@@ -1,5 +1,5 @@
 import React from "react";
-import SecondHeader from "./SecondHeader";
+import SecondHeader from "../components/SecondHeader";
 const AboutUs = () =>{
     return(
       <div id="page" className="page_wapper hfeed site" style={{marginTop : "100px"}}>

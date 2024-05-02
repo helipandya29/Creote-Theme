@@ -1201,7 +1201,7 @@ list-style:none outside
 }
 
 .woocommerce td.product-name .wc-item-meta .wc-item-meta-label,.woocommerce td.product-name .wc-item-meta dt,.woocommerce td.product-name dl.variation .wc-item-meta-label,.woocommerce td.product-name dl.variation dt {
-float:left;
+float:none;
 clear:both;
 margin-right:.25em;
 display:inline-block;
@@ -1275,7 +1275,7 @@ clear:both
 
 .woocommerce ul.cart_list li dl dd,.woocommerce ul.cart_list li dl dt,.woocommerce ul.product_list_widget li dl dd,.woocommerce ul.product_list_widget li dl dt {
 display:inline-block;
-float:left;
+float:none;
 margin-bottom:1em
 }
 
@@ -1565,7 +1565,7 @@ padding-left:1.5em
 
 .woocommerce .woocommerce-customer-details .woocommerce-customer-details--phone::before {
 font-family:WooCommerce;
-speak:never;
+speak-as:never;
 font-weight:400;
 font-variant:normal;
 text-transform:none;
@@ -1581,7 +1581,7 @@ position:absolute
 
 .woocommerce .woocommerce-customer-details .woocommerce-customer-details--email::before {
 font-family:WooCommerce;
-speak:never;
+speak-as:never;
 font-weight:400;
 font-variant:normal;
 text-transform:none;
@@ -1622,7 +1622,7 @@ padding:1px 0
 
 .woocommerce .woocommerce-widget-layered-nav-list .woocommerce-widget-layered-nav-list__item--chosen a::before {
 font-family:WooCommerce;
-speak:never;
+speak-as:never;
 font-weight:400;
 font-variant:normal;
 text-transform:none;
@@ -1659,7 +1659,7 @@ text-decoration:none
 
 .woocommerce .widget_layered_nav_filters ul li a::before {
 font-family:WooCommerce;
-speak:never;
+speak-as:never;
 font-weight:400;
 font-variant:normal;
 text-transform:none;
@@ -1774,7 +1774,7 @@ display:inline-block
 
 .woocommerce .widget_rating_filter ul li.chosen a::before {
 font-family:WooCommerce;
-speak:never;
+speak-as:never;
 font-weight:400;
 font-variant:normal;
 text-transform:none;
@@ -1922,7 +1922,7 @@ padding-left:0
 
 .woocommerce-account ul.digital-downloads li::before {
 font-family:WooCommerce;
-speak:never;
+speak-as:never;
 font-weight:400;
 font-variant:normal;
 text-transform:none;
@@ -1993,7 +1993,7 @@ display:inline-block
 
 #add_payment_method .cart-collaterals .shipping-calculator-button::after,.woocommerce-cart .cart-collaterals .shipping-calculator-button::after,.woocommerce-checkout .cart-collaterals .shipping-calculator-button::after {
 font-family:WooCommerce;
-speak:never;
+speak-as:never;
 font-weight:400;
 font-variant:normal;
 text-transform:none;
