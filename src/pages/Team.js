@@ -7,7 +7,7 @@ const Team = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/specific-team-members")
+      .get("http://localhost:5000/api/creote/specific-team-members")
       .then((response) => {
         setSpecificTeamMembers(response.data);
         setLoading(false);
