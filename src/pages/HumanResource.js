@@ -1,6 +1,25 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 const HumanResource =()=>{
+  const [humanResource, setHumanResource] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/api/creote/specifichumanresource")
+      .then((response) => {
+        setHumanResource(response.data);
+        setLoading(false);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+
     return(   
       <section className="service-section-two bg_light_1">
       <div className="pd_top_80"></div>
@@ -15,21 +34,24 @@ const HumanResource =()=>{
             </div>
             <div className="mr_bottom_70"></div>
           </div>
+        <div className="row">
+          {humanResource.map((human,index) => ( 
           <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-xs-12">
             <div className="service_box style_three dark_color">
               <div className="service_content">
                 <div className="content_inner">
                   <span className="icon-dollar"><i></i></span>
-                  <small className="nom">01</small>
-                  <h2><a href="/">Employee Compensation </a></h2>
-                  <p>Holds in these matters principles selection right rejects.</p>
+                  <small className="nom">0{index+1}</small>
+                  <h2><a href="/">{human. title} </a></h2>
+                  <p>{human.content}</p>
                   <a href="/" className="read_more">Read more <i className="icon-right-arrow"></i></a>
                 </div>
               </div>
             </div>
             <div className="mr_bottom_30"></div>
           </div>
-          <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+          ))}
+          {/* <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-xs-12">
             <div className="service_box style_three dark_color">
               <div className="service_content">
                 <div className="content_inner">
@@ -42,8 +64,8 @@ const HumanResource =()=>{
               </div>
             </div>
             <div className="mr_bottom_30"></div>
-          </div>
-          <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+          </div> */}
+          {/* <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-xs-12">
             <div className="service_box style_three dark_color">
               <div className="service_content">
                 <div className="content_inner">
@@ -56,8 +78,8 @@ const HumanResource =()=>{
               </div>
             </div>
             <div className="mr_bottom_30"></div>
-          </div>
-          <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+          </div> */}
+          {/* <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-xs-12">
             <div className="service_box style_three dark_color">
               <div className="service_content">
                 <div className="content_inner">
@@ -70,6 +92,7 @@ const HumanResource =()=>{
               </div>
             </div>
             <div className="mr_bottom_30"></div>
+          </div> */}
           </div>
         </div>
       </div>

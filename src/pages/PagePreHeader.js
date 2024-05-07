@@ -37,11 +37,11 @@ const PagePreHeader = () => {
           <i className="icon-shopping-cart"></i>
         </div>
         {/* <!----pre loader-----> */}
-        <div className="preloader-wrap">
+        {/* <div className="preloader-wrap">
           <div className="preloader" style={{ backgroundImage: `url(${imageUrl1})` }}>
           </div>
           <div className="overlay"></div>
-        </div>
+        </div> */}
       </div>
       {/* <!----pre loader end-----> */}
     </div>
