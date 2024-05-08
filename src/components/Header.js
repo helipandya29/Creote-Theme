@@ -1,13 +1,32 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const [header, setHeader] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/api/creote/specificheader")
+      .then((response) => {
+        setHeader(response.data);
+        setLoading(false); 
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>
+  }
+
   return (
     // <!----header----->
     <div className="header_area " id="header_contents">
       <div className="top_bar style_one">
         <div className="auto-container">
           <div className="row">
+            {header.map((header) => (
             <div className="col-lg-12">
               <div className="top_inner">
                 <div className="left_side common_css">
@@ -15,15 +34,15 @@ const Header = () => {
                     <i className="icon-placeholder"></i>
                     <div className="text">
                       <small>Location</small>
-                      <span>61W Business Str Hobert, LA </span>
+                      <span> {header.location} </span>
                     </div>
                   </div>
                   <div className="contntent email">
                     <i className="icon-email"></i>
                     <div className="text">
                       <small>Email</small>
-                      <Link to="mailto:sendmail@creote.com">
-                        sendmail@creote.com
+                      <Link to="mailto:{header.email}">
+                        {header.email}
                       </Link>
                     </div>
                   </div>
@@ -33,7 +52,7 @@ const Header = () => {
                     <i className="icon-phone-call"></i>
                     <div className="text">
                       <small>Phone</small>
-                      <Link to="tel:+9806071234">+9806071234</Link>
+                      <Link to="tel:{header.phone}">{header.phone}</Link>
                     </div>
                   </div>
                   <div className="contntent media">
@@ -57,6 +76,7 @@ const Header = () => {
                 </div>
               </div>
             </div>
+            ))}
           </div>
         </div>
       </div>
