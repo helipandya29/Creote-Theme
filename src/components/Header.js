@@ -11,13 +11,13 @@ const Header = () => {
       .get("http://localhost:5000/api/creote/specificheader")
       .then((response) => {
         setHeader(response.data);
-        setLoading(false); 
+        setLoading(false);
       })
       .catch((error) => console.log(error));
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>
+    return <div>Loading...</div>;
   }
 
   return (
@@ -26,56 +26,56 @@ const Header = () => {
       <div className="top_bar style_one">
         <div className="auto-container">
           <div className="row">
-            {header.map((header) => (
-            <div className="col-lg-12">
-              <div className="top_inner">
-                <div className="left_side common_css">
-                  <div className="contntent address">
-                    <i className="icon-placeholder"></i>
-                    <div className="text">
-                      <small>Location</small>
-                      <span> {header.location} </span>
+            {header.map((header, index) => (
+              <div key={index} className="col-lg-12">
+                <div className="top_inner">
+                  <div className="left_side common_css">
+                    <div className="contntent address">
+                      <i className="icon-placeholder"></i>
+                      <div className="text">
+                        <small>Location</small>
+                        <span> {header.location} </span>
+                      </div>
+                    </div>
+                    <div className="contntent email">
+                      <i className="icon-email"></i>
+                      <div className="text">
+                        <small>Email</small>
+                        <Link to={`mailto:${header.email}`}>
+                          {header.email}
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                  <div className="contntent email">
-                    <i className="icon-email"></i>
-                    <div className="text">
-                      <small>Email</small>
-                      <Link to="mailto:{header.email}">
-                        {header.email}
-                      </Link>
+                  <div className="right_side common_css">
+                    <div className="contntent phone">
+                      <i className="icon-phone-call"></i>
+                      <div className="text">
+                        <small>Phone</small>
+                        <Link to={`tel:${header.phone}`}>{header.phone}</Link>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div className="right_side common_css">
-                  <div className="contntent phone">
-                    <i className="icon-phone-call"></i>
-                    <div className="text">
-                      <small>Phone</small>
-                      <Link to="tel:{header.phone}">{header.phone}</Link>
-                    </div>
-                  </div>
-                  <div className="contntent media">
-                    <i className="icon-share"></i>
-                    <div className="text">
-                      <small>Share</small>
-                      <Link to="#" target="_blank" rel="nofollow">
-                        <i className="fa fa-facebook"></i>
-                      </Link>
-                      <Link to="#" target="_blank" rel="nofollow">
-                        <i className="fa fa-twitter"></i>
-                      </Link>
-                      <Link to="#" target="_blank" rel="nofollow">
-                        <i className="fa fa-skype"></i>
-                      </Link>
-                      <Link to="#" target="_blank" rel="nofollow">
-                        <i className="fa fa-telegram"></i>
-                      </Link>
+                    <div className="contntent media">
+                      <i className="icon-share"></i>
+                      <div className="text">
+                        <small>Share</small>
+                        <Link to="#" target="_blank" rel="nofollow">
+                          <i className="fa fa-facebook"></i>
+                        </Link>
+                        <Link to="#" target="_blank" rel="nofollow">
+                          <i className="fa fa-twitter"></i>
+                        </Link>
+                        <Link to="#" target="_blank" rel="nofollow">
+                          <i className="fa fa-skype"></i>
+                        </Link>
+                        <Link to="#" target="_blank" rel="nofollow">
+                          <i className="fa fa-telegram"></i>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
             ))}
           </div>
         </div>
@@ -178,10 +178,7 @@ const Header = () => {
                             </Link>
                           </li>
                           <li className="menu-item  nav-item">
-                            <Link
-                              to="/faqs"
-                              className="dropdown-item nav-link"
-                            >
+                            <Link to="/faqs" className="dropdown-item nav-link">
                               <span>Faq’s</span>
                             </Link>
                           </li>

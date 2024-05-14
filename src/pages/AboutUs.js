@@ -201,26 +201,26 @@ const AboutUs = () =>{
             {/* <!---service end--->
             <!---timeline----> */}
             {/* <!---timeline----> */}
-            <section class="timeline-section">
+            <section className="timeline-section">
           {/* /  <!--===============spacing==============--> */}
-            <div class="pd_top_90"></div>
+            <div className="pd_top_90"></div>
             {/* <!--===============spacing==============--> */}
-               <div class="row">
-                  <div class="col-lg-12">
-                     <div class="title_all_box style_one text-center dark_color">
-                        <div class="title_sections">
-                           <div class="before_title">Evaluation of</div>
-                           <h2 class="title">Our Company &amp; Partners</h2>
+               <div className="row">
+                  <div className="col-lg-12">
+                     <div className="title_all_box style_one text-center dark_color">
+                        <div className="title_sections">
+                           <div className="before_title">Evaluation of</div>
+                           <h2 className="title">Our Company &amp; Partners</h2>
                         </div>
                         {/* <!--===============spacing==============--> */}
-                        <div class="pd_bottom_20"></div>
+                        <div className="pd_bottom_20"></div>
                         {/* <!--===============spacing==============--> */}
                      </div>
                   </div>
                </div>
-               <div class="row">
-                  <div class="col-lg-12 pd_zero">
-                     <div class="time_line_section style_one">
+               <div className="row">
+                  <div className="col-lg-12 pd_zero">
+                     <div className="time_line_section style_one">
                      <div className="swiper-container" data-swiper='{
               "autoplay": {"delay": 6000},
               "freemode": false,
@@ -239,67 +239,67 @@ const AboutUs = () =>{
                 "0": {"slidesPerView": 1}
               }
             }'>
-                           <div class="swiper-button-next">
-                              <div class="border_one sme"></div>
+                           <div className="swiper-button-next">
+                              <div className="border_one sme"></div>
                            </div>
-                           <div class="swiper-button-prev">
-                              <div class="border_two sme"></div>
+                           <div className="swiper-button-prev">
+                              <div className="border_two sme"></div>
                            </div>
-                           <div class="swiper-wrapper">
-                              <div class="swiper-slide">
-                                 <div class="time_line_box">
-                                    <div class="time_inner">
-                                       <div class="border_liner">
+                           <div className="swiper-wrapper">
+                              <div className="swiper-slide">
+                                 <div className="time_line_box">
+                                    <div className="time_inner">
+                                       <div className="border_liner">
                                           <span></span>
-                                          <span class="last"></span>
+                                          <span className="last"></span>
                                        </div>
-                                       <div class="content">
+                                       <div className="content">
                                           <h2>
                                              <a href="/" target="_blank" rel="nofollow">Company Started</a>
                                           </h2>
                                           <p>Expound the actual teachings of the great explorer the truth the masters
                                              builder of human happiness one rejects.</p>
                                        </div>
-                                       <div class="year">
+                                       <div className="year">
                                           1998
                                        </div>
-                                       <div class="image">
+                                       <div className="image">
                                           <img src="assets/images/project-3-img.jpg" alt="img"/>
                                        </div>
                                     </div>
                                  </div>
                               </div>
-                              <div class="swiper-slide">
-                                 <div class="time_line_box">
-                                    <div class="time_inner">
-                                       <div class="border_liner">
+                              <div className="swiper-slide">
+                                 <div className="time_line_box">
+                                    <div className="time_inner">
+                                       <div className="border_liner">
                                           <span></span>
-                                          <span class="last"></span>
+                                          <span className="last"></span>
                                        </div>
-                                       <div class="content">
+                                       <div className="content">
                                           <h2>
                                              <a href="/" target="_blank" rel="nofollow">New Milestone</a>
                                           </h2>
                                           <p>No one rejects dislikes or avoids pleasures itself because it is pleasures,
                                              but because those who pursue pleasure rationally.</p>
                                        </div>
-                                       <div class="year">
+                                       <div className="year">
                                           2000
                                        </div>
-                                       <div class="image">
+                                       <div className="image">
                                           <img src="assets/images/project-5-img.jpg" alt="img"/>
                                        </div>
                                     </div>
                                  </div>
                               </div>
-                              <div class="swiper-slide">
-                                 <div class="time_line_box">
-                                    <div class="time_inner">
-                                       <div class="border_liner">
+                              <div className="swiper-slide">
+                                 <div className="time_line_box">
+                                    <div className="time_inner">
+                                       <div className="border_liner">
                                           <span></span>
-                                          <span class="last"></span>
+                                          <span className="last"></span>
                                        </div>
-                                       <div class="content">
+                                       <div className="content">
                                           <h2>
                                              <a href="/" target="_blank" rel="nofollow">
                                                 First Award </a>
@@ -309,23 +309,23 @@ const AboutUs = () =>{
                                              pursue pleasure rationally.
                                           </p>
                                        </div>
-                                       <div class="year">
+                                       <div className="year">
                                           2001
                                        </div>
-                                       <div class="image">
+                                       <div className="image">
                                           <img src="assets/images/service-image-4.jpg" alt="img"/>
                                        </div>
                                     </div>
                                  </div>
                               </div>
-                              <div class="swiper-slide">
-                                 <div class="time_line_box">
-                                    <div class="time_inner">
-                                       <div class="border_liner">
+                              <div className="swiper-slide">
+                                 <div className="time_line_box">
+                                    <div className="time_inner">
+                                       <div className="border_liner">
                                           <span></span>
-                                          <span class="last"></span>
+                                          <span className="last"></span>
                                        </div>
-                                       <div class="content">
+                                       <div className="content">
                                           <h2>
                                              <a href="/" target="_blank" rel="nofollow">
                                                 100 Employees </a>
@@ -335,23 +335,23 @@ const AboutUs = () =>{
                                              happiness one rejects.
                                           </p>
                                        </div>
-                                       <div class="year">
+                                       <div className="year">
                                           2004
                                        </div>
-                                       <div class="image">
+                                       <div className="image">
                                           <img src="assets/images/blog-image-8.jpg" alt="img"/>
                                        </div>
                                     </div>
                                  </div>
                               </div>
-                              <div class="swiper-slide">
-                                 <div class="time_line_box">
-                                    <div class="time_inner">
-                                       <div class="border_liner">
+                              <div className="swiper-slide">
+                                 <div className="time_line_box">
+                                    <div className="time_inner">
+                                       <div className="border_liner">
                                           <span></span>
-                                          <span class="last"></span>
+                                          <span className="last"></span>
                                        </div>
-                                       <div class="content">
+                                       <div className="content">
                                           <h2>
                                              <a href="/" target="_blank" rel="nofollow">
                                                 Company Started </a>
@@ -361,23 +361,23 @@ const AboutUs = () =>{
                                              happiness one rejects.
                                           </p>
                                        </div>
-                                       <div class="year">
+                                       <div className="year">
                                           1998
                                        </div>
-                                       <div class="image">
+                                       <div className="image">
                                           <img src="assets/images/project-3-img.jpg" alt="img"/>
                                        </div>
                                     </div>
                                  </div>
                               </div>
-                              <div class="swiper-slide">
-                                 <div class="time_line_box">
-                                    <div class="time_inner">
-                                       <div class="border_liner">
+                              <div className="swiper-slide">
+                                 <div className="time_line_box">
+                                    <div className="time_inner">
+                                       <div className="border_liner">
                                           <span></span>
-                                          <span class="last"></span>
+                                          <span className="last"></span>
                                        </div>
-                                       <div class="content">
+                                       <div className="content">
                                           <h2>
                                              <a href="/" target="_blank" rel="nofollow">
                                                 New Milestone </a>
@@ -387,69 +387,69 @@ const AboutUs = () =>{
                                              pursue pleasure rationally.
                                           </p>
                                        </div>
-                                       <div class="year">
+                                       <div className="year">
                                           2000
                                        </div>
-                                       <div class="image">
+                                       <div className="image">
                                           <img src="assets/images/project-5-img.jpg" alt="img"/>
                                        </div>
                                     </div>
                                  </div>
                               </div>
-                              <div class="swiper-slide">
-                                 <div class="time_line_box">
-                                    <div class="time_inner">
-                                       <div class="border_liner">
+                              <div className="swiper-slide">
+                                 <div className="time_line_box">
+                                    <div className="time_inner">
+                                       <div className="border_liner">
                                           <span></span>
-                                          <span class="last"></span>
+                                          <span className="last"></span>
                                        </div>
-                                       <div class="content">
+                                       <div className="content">
                                           <h2>
                                              <a href="/" target="_blank" rel="nofollow">Company Started</a>
                                           </h2>
                                           <p>Expound the actual teachings of the great explorer the truth the masters
                                              builder of human happiness one rejects.</p>
                                        </div>
-                                       <div class="year">
+                                       <div className="year">
                                           1998
                                        </div>
-                                       <div class="image">
+                                       <div className="image">
                                           <img src="assets/images/project-3-img.jpg" alt="img"/>
                                        </div>
                                     </div>
                                  </div>
                               </div>
-                              <div class="swiper-slide">
-                                 <div class="time_line_box">
-                                    <div class="time_inner">
-                                       <div class="border_liner">
+                              <div className="swiper-slide">
+                                 <div className="time_line_box">
+                                    <div className="time_inner">
+                                       <div className="border_liner">
                                           <span></span>
-                                          <span class="last"></span>
+                                          <span className="last"></span>
                                        </div>
-                                       <div class="content">
+                                       <div className="content">
                                           <h2>
                                              <a href="/" target="_blank" rel="nofollow">New Milestone</a>
                                           </h2>
                                           <p>No one rejects dislikes or avoids pleasures itself because it is pleasures,
                                              but because those who pursue pleasure rationally.</p>
                                        </div>
-                                       <div class="year">
+                                       <div className="year">
                                           2000
                                        </div>
-                                       <div class="image">
+                                       <div className="image">
                                           <img src="assets/images/project-5-img.jpg" alt="img"/>
                                        </div>
                                     </div>
                                  </div>
                               </div>
-                              <div class="swiper-slide">
-                                 <div class="time_line_box">
-                                    <div class="time_inner">
-                                       <div class="border_liner">
+                              <div className="swiper-slide">
+                                 <div className="time_line_box">
+                                    <div className="time_inner">
+                                       <div className="border_liner">
                                           <span></span>
-                                          <span class="last"></span>
+                                          <span className="last"></span>
                                        </div>
-                                       <div class="content">
+                                       <div className="content">
                                           <h2>
                                              <a href="/" target="_blank" rel="nofollow">
                                                 First Award </a>
@@ -459,23 +459,23 @@ const AboutUs = () =>{
                                              pursue pleasure rationally.
                                           </p>
                                        </div>
-                                       <div class="year">
+                                       <div className="year">
                                           2001
                                        </div>
-                                       <div class="image">
+                                       <div className="image">
                                           <img src="assets/images/service-image-4.jpg" alt="img"/>
                                        </div>
                                     </div>
                                  </div>
                               </div>
-                              <div class="swiper-slide">
-                                 <div class="time_line_box">
-                                    <div class="time_inner">
-                                       <div class="border_liner">
+                              <div className="swiper-slide">
+                                 <div className="time_line_box">
+                                    <div className="time_inner">
+                                       <div className="border_liner">
                                           <span></span>
-                                          <span class="last"></span>
+                                          <span className="last"></span>
                                        </div>
-                                       <div class="content">
+                                       <div className="content">
                                           <h2>
                                              <a href="/" target="_blank" rel="nofollow">
                                                 100 Employees </a>
@@ -485,23 +485,23 @@ const AboutUs = () =>{
                                              happiness one rejects.
                                           </p>
                                        </div>
-                                       <div class="year">
+                                       <div className="year">
                                           2004
                                        </div>
-                                       <div class="image">
+                                       <div className="image">
                                           <img src="assets/images/blog-image-8.jpg" alt="img"/>
                                        </div>
                                     </div>
                                  </div>
                               </div>
-                              <div class="swiper-slide">
-                                 <div class="time_line_box">
-                                    <div class="time_inner">
-                                       <div class="border_liner">
+                              <div className="swiper-slide">
+                                 <div className="time_line_box">
+                                    <div className="time_inner">
+                                       <div className="border_liner">
                                           <span></span>
-                                          <span class="last"></span>
+                                          <span className="last"></span>
                                        </div>
-                                       <div class="content">
+                                       <div className="content">
                                           <h2>
                                              <a href="/" target="_blank" rel="nofollow">
                                                 Company Started </a>
@@ -511,23 +511,23 @@ const AboutUs = () =>{
                                              happiness one rejects.
                                           </p>
                                        </div>
-                                       <div class="year">
+                                       <div className="year">
                                           1998
                                        </div>
-                                       <div class="image">
+                                       <div className="image">
                                           <img src="assets/images/project-3-img.jpg" alt="img"/>
                                        </div>
                                     </div>
                                  </div>
                               </div>
-                              <div class="swiper-slide">
-                                 <div class="time_line_box">
-                                    <div class="time_inner">
-                                       <div class="border_liner">
+                              <div className="swiper-slide">
+                                 <div className="time_line_box">
+                                    <div className="time_inner">
+                                       <div className="border_liner">
                                           <span></span>
-                                          <span class="last"></span>
+                                          <span className="last"></span>
                                        </div>
-                                       <div class="content">
+                                       <div className="content">
                                           <h2>
                                              <a href="/" target="_blank" rel="nofollow">
                                                 New Milestone </a>
@@ -537,10 +537,10 @@ const AboutUs = () =>{
                                              pursue pleasure rationally.
                                           </p>
                                        </div>
-                                       <div class="year">
+                                       <div className="year">
                                           2000
                                        </div>
-                                       <div class="image">
+                                       <div className="image">
                                           <img src="assets/images/project-5-img.jpg" alt="img"/>
                                        </div>
                                     </div>
@@ -553,7 +553,7 @@ const AboutUs = () =>{
                   </div>
                </div>
                {/* <!--===============spacing==============--> */}
-               <div class="pd_top_90"></div>
+               <div className="pd_top_90"></div>
                {/* <!--===============spacing==============--> */}
             </section>
             {/* <!---timeline----> */}

@@ -17,7 +17,7 @@ import Price from "./pages/Price.js";
 import TestimonialSection from "./pages/TestimonialSection.js";
 import OurTeam from "./pages/OurTeam.js";
 import AboutUs from "./pages/AboutUs.js";
-import ServiceClassic from "./pages/ServiceClassic.js"
+import ServiceClassic from "./pages/ServiceClassic.js";
 import ServiceDefault from "./pages/ServiceDefault.js";
 import ServiceDetails from "./pages/ServiceDetails.js";
 import PricingPackages from "./components/PricingPackages.js";
@@ -29,6 +29,7 @@ import BlogSimple from "./pages/BlogSimple.js";
 import BlogListView from "./pages/BlogListView.js";
 import BlogMetro from "./pages/BlogMetro.js";
 import BlogSinglePost from "./pages/BlogSinglePost.js";
+import Slider from "./pages/Slider.js";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -52,8 +53,9 @@ const router = createBrowserRouter(
       <Route path="blogSimple" element={<BlogSimple />} />
       <Route path="blogListView" element={<BlogListView />} />
       <Route path="blogMetro" element={<BlogMetro />} />
-      <Route path="blogSinglePost" element={<BlogSinglePost />}/>
-</Route>
+      <Route path="blogSinglePost" element={<BlogSinglePost />} />
+      <Route path="slider" element={<Slider />} />
+    </Route>
   )
 );
 

@@ -119,4 +119,3 @@ const TabSection = () => {
 };
 
 export default TabSection;
-

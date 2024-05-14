@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-const HumanResource =()=>{
+const HumanResource = () => {
   const [humanResource, setHumanResource] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -19,9 +19,8 @@ const HumanResource =()=>{
     return <div>Loading...</div>;
   }
 
-
-    return(   
-      <section className="service-section-two bg_light_1">
+  return (
+    <section className="service-section-two bg_light_1">
       <div className="pd_top_80"></div>
       <div className="container pd_zero">
         <div className="row">
@@ -34,24 +33,34 @@ const HumanResource =()=>{
             </div>
             <div className="mr_bottom_70"></div>
           </div>
-        <div className="row">
-          {humanResource.map((human,index) => ( 
-          <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-xs-12">
-            <div className="service_box style_three dark_color">
-              <div className="service_content">
-                <div className="content_inner">
-                  <span className="icon-dollar"><i></i></span>
-                  <small className="nom">0{index+1}</small>
-                  <h2><a href="/">{human. title} </a></h2>
-                  <p>{human.content}</p>
-                  <a href="/" className="read_more">Read more <i className="icon-right-arrow"></i></a>
+          <div className="row">
+            {humanResource.map((human, index) => (
+              <div
+                key={index}
+                className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-xs-12"
+              >
+                <div className="service_box style_three dark_color">
+                  <div className="service_content">
+                    <div className="content_inner">
+                      <span className="icon-dollar">
+                        <i></i>
+                      </span>
+                      <small className="nom">0{index + 1}</small>
+                      <h2>
+                        <a href="/">{human.title}</a>
+                      </h2>
+                      <p>{human.content}</p>
+                      <a href="/" className="read_more">
+                        Read more <i className="icon-right-arrow"></i>
+                      </a>
+                    </div>
+                  </div>
                 </div>
+                <div className="mr_bottom_30"></div>
               </div>
-            </div>
-            <div className="mr_bottom_30"></div>
-          </div>
-          ))}
-          {/* <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            ))}
+
+            {/* <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-xs-12">
             <div className="service_box style_three dark_color">
               <div className="service_content">
                 <div className="content_inner">
@@ -65,7 +74,7 @@ const HumanResource =()=>{
             </div>
             <div className="mr_bottom_30"></div>
           </div> */}
-          {/* <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            {/* <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-xs-12">
             <div className="service_box style_three dark_color">
               <div className="service_content">
                 <div className="content_inner">
@@ -79,7 +88,7 @@ const HumanResource =()=>{
             </div>
             <div className="mr_bottom_30"></div>
           </div> */}
-          {/* <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            {/* <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-xs-12">
             <div className="service_box style_three dark_color">
               <div className="service_content">
                 <div className="content_inner">
@@ -98,7 +107,7 @@ const HumanResource =()=>{
       </div>
       <div className="pd_bottom_50"></div>
     </section>
-    )
-}
+  );
+};
 
 export default HumanResource;

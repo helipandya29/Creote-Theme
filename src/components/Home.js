@@ -7,19 +7,20 @@ import Price from "../pages/Price";
 import HumanResource from "../pages/HumanResource";
 import Blog from "../pages/Blog";
 import TestimonialSection from "../pages/TestimonialSection";
+import Logo from "../pages/Logo";
 
 function Home() {
   return (
     <div>
       <Slider />
       <Service />
-      <HumanResource/>
+      <Logo />
+      <HumanResource />
       <Team />
       <TabSection />
       <Price />
-      <TestimonialSection/>
-      <Blog/>
-      
+      <TestimonialSection />
+      <Blog />
     </div>
   );
 }

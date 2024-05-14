@@ -16,52 +16,55 @@ const Service = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>
+    return <div>Loading...</div>;
   }
   return (
     <div id="content" className="site-content " style={{ marginTop: "30px" }}>
       {/* <!--service--> */}
       <div className="row"></div>
       <section className="service-section-one bg_light_1">
-  <div className="pd_top_80"></div>
-  <div className="container">
-    <div className="title_all_box style_one text-center dark_color">
-      <div className="title_sections">
-        <div className="before_title"> Check Out </div>
-        <h2>Customer Service Section</h2>
-      </div>
-      <div className="pd_bottom_20"></div>
-    </div>
-    <div className="invisible_normal_spacing"></div>
-    <div className="row">
-      {customerServiceSection.map((customer) => (
-      <div className="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-xs-12">
-        <div className="service_box style_four dark_color">
-          <div className="service_content">
-            <div className="image_box">
-              <img
-                src={customer.imageSrc}
-                className="img-fluid"
-                alt=""
-              />
-              <span className="icon-video-player"></span>
+        <div className="pd_top_80"></div>
+        <div className="container">
+          <div className="title_all_box style_one text-center dark_color">
+            <div className="title_sections">
+              <div className="before_title"> Check Out </div>
+              <h2>Customer Service Section</h2>
             </div>
-            <div className="content_inner">
-              <h2>
-                <a href="/">{customer.title}</a>
-              </h2>
-              <p>{customer.content}</p>
-            </div>
+            <div className="pd_bottom_20"></div>
+          </div>
+          <div className="invisible_normal_spacing"></div>
+          <div className="row">
+            {customerServiceSection.map((customer, index) => (
+              <div
+                key={index}
+                className="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-xs-12"
+              >
+                <div className="service_box style_four dark_color">
+                  <div className="service_content">
+                    <div className="image_box">
+                      <img
+                        src={customer.imageSrc}
+                        className="img-fluid"
+                        alt=""
+                      />
+                      <span className="icon-video-player"></span>
+                    </div>
+                    <div className="content_inner">
+                      <h2>
+                        <a href="/">{customer.title}</a>
+                      </h2>
+                      <p>{customer.content}</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="mr_bottom_30"></div>
+              </div>
+            ))}
           </div>
         </div>
-        <div className="mr_bottom_30"></div>
-      </div>
-      ))}
-    </div>
-  </div>
-  <div className="pd_bottom_60"></div>
-</section>
-{/* <!--service end--> */}
+        <div className="pd_bottom_60"></div>
+      </section>
+      {/* <!--service end--> */}
       {/* <!--image-box-section--> */}
       <section className="image-box-section">
         <div className="pd_top_80"></div>
@@ -173,90 +176,6 @@ const Service = () => {
         <div className="pd_bottom_80"></div>
       </section>
       {/* <!--image-box-section-end--> */}
-      {/* <!--client--> */}
-      <section className="client-brand-section">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="client_logo_carousel type_one">
-                <div
-                  className="swiper-container"
-                  data-swiper='{"autoplay": {"delay": 6000}, "freeMode": true, "loop": true, "speed": 1000, "centeredSlides": false, "slidesPerView": 4, "spaceBetween": 30, "pagination": {"el": ".swiper-pagination", "clickable": true}, "navigation": {"nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev"}, "breakpoints": {"1200": {"slidesPerView": 4}, "1024": {"slidesPerView": 3}, "768": {"slidesPerView": 2}, "576": {"slidesPerView": 1}, "0": {"slidesPerView": 1}}}'
-                >
-                  <div className="swiper-wrapper">
-                    <div className="swiper-slide">
-                      <div className="image">
-                        <img
-                          src="assets/images/CLIENT-logo-1.png"
-                          alt="clients-logo"
-                        />
-                      </div>
-                    </div>
-                    <div className="swiper-slide">
-                      <div className="image">
-                        <img
-                          src="assets/images/CLIENT-logo-2.png"
-                          alt="clients-logo"
-                        />
-                      </div>
-                    </div>
-                    <div className="swiper-slide">
-                      <div className="image">
-                        <img
-                          src="assets/images/CLIENT-logo-3.png"
-                          alt="clients-logo"
-                        />
-                      </div>
-                    </div>
-                    <div className="swiper-slide">
-                      <div className="image">
-                        <img
-                          src="assets/images/CLIENT-logo-4.png"
-                          alt="clients-logo"
-                        />
-                      </div>
-                    </div>
-                    <div className="swiper-slide">
-                      <div className="image">
-                        <img
-                          src="assets/images/CLIENT-logo-1.png"
-                          alt="clients-logo"
-                        />
-                      </div>
-                    </div>
-                    <div className="swiper-slide">
-                      <div className="image">
-                        <img
-                          src="assets/images/CLIENT-logo-2.png"
-                          alt="clients-logo"
-                        />
-                      </div>
-                    </div>
-                    <div className="swiper-slide">
-                      <div className="image">
-                        <img
-                          src="assets/images/CLIENT-logo-3.png"
-                          alt="clients-logo"
-                        />
-                      </div>
-                    </div>
-                    <div className="swiper-slide">
-                      <div className="image">
-                        <img
-                          src="assets/images/CLIENT-logo-4.png"
-                          alt="clients-logo"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="pd_bottom_80"></div>
-      </section>
-      {/* <!--client-end--> */}
     </div>
   );
 };
