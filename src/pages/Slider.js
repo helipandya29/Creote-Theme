@@ -3,7 +3,7 @@ import axios from "axios";
 
 const Slider = () => {
   const [users, setUsers] = useState([]);
-
+                                          
   useEffect(() => {
     axios
       .get("http://localhost:5000/api/creote/getSpecificSlider")

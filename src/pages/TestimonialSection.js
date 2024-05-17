@@ -1,7 +1,50 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Swiper from "swiper";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import "swiper/swiper-bundle.css";
+
 const imageUrl11 = "assets/images/testimonialbg.jpg";
 
 const TestimonialSection = () => {
+  useEffect(() => {
+    Swiper.use([Navigation, Pagination, Autoplay]);
+    new Swiper(".swiper-container", {
+      loop: true,
+      autoplay: {
+        delay: 7000,
+      },
+      speed: 1000,
+      centeredSlides: false,
+      slidesPerView: 1,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: ".next-single-one",
+        prevEl: ".prev-single-one",
+      },
+      pagination: {
+        el: ".number-pagination",
+        type: "fraction",
+      },
+      breakpoints: {
+        1200: {
+          slidesPerView: 1,
+        },
+        1024: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 1,
+        },
+        576: {
+          slidesPerView: 1,
+        },
+        0: {
+          slidesPerView: 1,
+        },
+      },
+    });
+  }, []);
+
   return (
     <>
       {/* <!---testimonial---> */}
@@ -37,44 +80,7 @@ const TestimonialSection = () => {
                 <div className="icon_quotes">
                   <i className="icon-quote"></i>
                 </div>
-                <div
-                  className="swiper-container"
-                  data-swiper='{
-                              "loop": true,
-                              "autoplay": {
-                                "delay": 7000
-                              },
-                              "speed": 1000,
-                              "centeredSlides": false,
-                              "slidesPerView": 1,
-                              "spaceBetween": 30,
-                              "navigation": {
-                                "nextEl": ".next-single-one",
-                                "prevEl": ".prev-single-one"
-                              },
-                              "pagination": {
-                                "el": ".number-pagination",
-                                "type": "fraction"
-                              },
-                              "breakpoints": {
-                                "1200": {
-                                  "slidesPerView": 1 
-                                },
-                                "1024": {
-                                  "slidesPerView": 1 
-                                },
-                                "768": {
-                                  "slidesPerView": 1 
-                                },
-                                "576": {
-                                  "slidesPerView": 1 
-                                },
-                                "0": {
-                                  "slidesPerView": 1 
-                                }
-                              }
-                            }'
-                >
+                <div className="swiper-container">
                   <div className="swiper-wrapper">
                     <div className="swiper-slide">
                       <div className="testimonial_box">
@@ -189,4 +195,3 @@ const TestimonialSection = () => {
 };
 
 export default TestimonialSection;
-
