@@ -14,7 +14,6 @@ const Slider = () => {
   }, []);
 
   useEffect(() => {
-    console.log("Users: ", users);
     $(".banner_carousel").owlCarousel({
       // Owl Carousel options
       loop: true,

@@ -16,6 +16,77 @@ const Header = () => {
       .catch((error) => console.log(error));
   }, []);
 
+  useEffect(() => {
+    const creoteSearchPopup = () => {
+      const searchPopup = document.getElementById("search-popup");
+      const searchToggler = document.querySelectorAll(".search-toggler");
+      const closeSearch = document.querySelectorAll(
+        ".close-search, .search-popup .overlay-layer"
+      );
+
+      if (searchPopup) {
+        searchToggler.forEach((toggler) => {
+          toggler.addEventListener("click", () => {
+            searchPopup.classList.add("popup-visible");
+          });
+        });
+
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") {
+            searchPopup.classList.remove("popup-visible");
+          }
+        });
+
+        closeSearch.forEach((element) => {
+          element.addEventListener("click", () => {
+            searchPopup.classList.remove("popup-visible");
+          });
+        });
+      }
+    };
+
+    creoteSearchPopup();
+  });
+
+  useEffect(() => {
+    const createContactPopup = () => {
+      const contactPopup = document.querySelector(".modal_popup");
+      const contactToggler = document.querySelector(".contact-toggler");
+      const closeContact = document.querySelectorAll(".close-modal");
+
+      const toggleContactPopup = () => {
+        if (contactPopup) {
+          contactPopup.classList.toggle("contact-popup-visible");
+        }
+      };
+
+      if (contactToggler) {
+        contactToggler.addEventListener("click", toggleContactPopup);
+      }
+
+      closeContact.forEach((element) => {
+        element.addEventListener("click", () => {
+          contactPopup.classList.remove("contact-popup-visible");
+        });
+      });
+
+      // Cleanup function
+      return () => {
+        if (contactToggler) {
+          contactToggler.removeEventListener("click", toggleContactPopup);
+        }
+
+        closeContact.forEach((element) => {
+          element.removeEventListener("click", () => {
+            contactPopup.classList.remove("contact-popup-visible");
+          });
+        });
+      };
+    };
+
+    createContactPopup();
+  }, []);
+
   if (loading) {
     return <div>Loading...</div>;
   }
