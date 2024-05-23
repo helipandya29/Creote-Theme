@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import SecondHeader from "../components/SecondHeader";
+import Service from "./Home/Service";
+import Logo from "./Home/Logo";
 
 function Faqs() {
   // State to manage which question is open
@@ -199,6 +201,8 @@ function Faqs() {
         {/* <!--===============spacing==============--> */}
       </section>
       {/* <!---faqs---> */}
+      <Service />
+      <Logo />
     </div>
   );
 }

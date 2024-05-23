@@ -1,6 +1,6 @@
 import React from "react";
-import Price from "../pages/Price";
-import Service from "../pages/Service";
+import Price from "../pages/Home/Price";
+import Service from "../pages/Home/Service";
 import SecondHeader from "./SecondHeader";
 
 function PricingPackages() {

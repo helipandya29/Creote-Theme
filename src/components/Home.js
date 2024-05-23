@@ -1,14 +1,14 @@
 import React from "react";
-import Slider from "../pages/Slider";
-import Service from "../pages/Service";
-import Team from "../pages/Team";
-import TabSection from "../pages/Tab";
-import Price from "../pages/Price";
-import HumanResource from "../pages/HumanResource";
-import Blog from "../pages/Blog";
-import TestimonialSection from "../pages/TestimonialSection";
-import Logo from "../pages/Logo";
-import ImageBoxSection from "../pages/ImageBoxSection";
+import Slider from "../pages/Home/Slider";
+import Service from "../pages/Home/Service";
+import Team from "../pages/Home/Team";
+import TabSection from "../pages/Home/Tab";
+import Price from "../pages/Home/Price";
+import HumanResource from "../pages/Home/HumanResource";
+import Blog from "../pages/Home/Blog";
+import TestimonialSection from "../pages/Home/TestimonialSection";
+import Logo from "../pages/Home/Logo";
+import ImageBoxSection from "../pages/Home/ImageBoxSection";
 
 function Home() {
   return (

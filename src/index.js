@@ -10,11 +10,11 @@ import {
 } from "react-router-dom";
 import Layout from "./components/Layout.js";
 import Home from "./components/Home";
-import Service from "./pages/Service.js";
-import Team from "./pages/Team.js";
-import TabSection from "./pages/Tab.js";
-import Price from "./pages/Price.js";
-import TestimonialSection from "./pages/TestimonialSection.js";
+import Service from "./pages/Home/Service.js";
+import Team from "./pages/Home/Team.js";
+import TabSection from "./pages/Home/Tab.js";
+import Price from "./pages/Home/Price.js";
+import TestimonialSection from "./pages/Home/TestimonialSection.js";
 import OurTeam from "./pages/OurTeam.js";
 import AboutUs from "./pages/AboutUs.js";
 import ServiceClassic from "./pages/ServiceClassic.js";
@@ -29,7 +29,7 @@ import BlogSimple from "./pages/BlogSimple.js";
 import BlogListView from "./pages/BlogListView.js";
 import BlogMetro from "./pages/BlogMetro.js";
 import BlogSinglePost from "./pages/BlogSinglePost.js";
-import Slider from "./pages/Slider.js";
+import Slider from "./pages/Home/Slider.js";
 
 const router = createBrowserRouter(
   createRoutesFromElements(

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import SecondHeader from "../components/SecondHeader";
+import ImageBoxSection from "./Home/ImageBoxSection";
+
 const Team = () => {
   const [specificTeamMembers, setSpecificTeamMembers] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -253,6 +255,7 @@ const Team = () => {
         {/* <!--===============spacing==============--> */}
       </section>
       {/* <!---team-end---> */}
+      <ImageBoxSection />
     </>
   );
 };

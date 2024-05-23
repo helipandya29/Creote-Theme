@@ -3,8 +3,8 @@ import { useEffect } from 'react';
 import Swiper from 'swiper/bundle';
 import 'swiper/swiper-bundle.css';
 import SecondHeader from "../components/SecondHeader";
-import TabSection from "./Tab";
-import Team from "./Team";
+import TabSection from "./Home/Tab";
+import Team from "./Home/Team";
 
 const AboutUs = () =>{
    useEffect(() => {
