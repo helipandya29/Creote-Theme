@@ -7,7 +7,7 @@ const HumanResource = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/creote/humanresource")
+      .get("http://localhost:5000/api/creote/specifichumanresource")
       .then((response) => {
         setHumanResource(response.data);
         setLoading(false);
@@ -35,7 +35,10 @@ const HumanResource = () => {
           </div>
           <div className="row">
             {humanResource.map((human, index) => (
-              <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+              <div
+                key={index}
+                className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-xs-12"
+              >
                 <div className="service_box style_three dark_color">
                   <div className="service_content">
                     <div className="content_inner">
@@ -44,7 +47,7 @@ const HumanResource = () => {
                       </span>
                       <small className="nom">0{index + 1}</small>
                       <h2>
-                        <a href="/">{human.title} </a>
+                        <a href="/">{human.title}</a>
                       </h2>
                       <p>{human.content}</p>
                       <a href="/" className="read_more">

@@ -1,62 +1,153 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const [header, setHeader] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/api/creote/specificheader")
+      .then((response) => {
+        setHeader(response.data);
+        setLoading(false);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
+  useEffect(() => {
+    const creoteSearchPopup = () => {
+      const searchPopup = document.getElementById("search-popup");
+      const searchToggler = document.querySelectorAll(".search-toggler");
+      const closeSearch = document.querySelectorAll(
+        ".close-search, .search-popup .overlay-layer"
+      );
+
+      if (searchPopup) {
+        searchToggler.forEach((toggler) => {
+          toggler.addEventListener("click", () => {
+            searchPopup.classList.add("popup-visible");
+          });
+        });
+
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") {
+            searchPopup.classList.remove("popup-visible");
+          }
+        });
+
+        closeSearch.forEach((element) => {
+          element.addEventListener("click", () => {
+            searchPopup.classList.remove("popup-visible");
+          });
+        });
+      }
+    };
+
+    creoteSearchPopup();
+  });
+
+  useEffect(() => {
+    const createContactPopup = () => {
+      const contactPopup = document.querySelector(".modal_popup");
+      const contactToggler = document.querySelector(".contact-toggler");
+      const closeContact = document.querySelectorAll(".close-modal");
+
+      const toggleContactPopup = () => {
+        if (contactPopup) {
+          contactPopup.classList.toggle("contact-popup-visible");
+        }
+      };
+
+      if (contactToggler) {
+        contactToggler.addEventListener("click", toggleContactPopup);
+      }
+
+      closeContact.forEach((element) => {
+        element.addEventListener("click", () => {
+          contactPopup.classList.remove("contact-popup-visible");
+        });
+      });
+
+      // Cleanup function
+      return () => {
+        if (contactToggler) {
+          contactToggler.removeEventListener("click", toggleContactPopup);
+        }
+
+        closeContact.forEach((element) => {
+          element.removeEventListener("click", () => {
+            contactPopup.classList.remove("contact-popup-visible");
+          });
+        });
+      };
+    };
+
+    createContactPopup();
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
   return (
     // <!----header----->
     <div className="header_area " id="header_contents">
       <div className="top_bar style_one">
         <div className="auto-container">
           <div className="row">
-            <div className="col-lg-12">
-              <div className="top_inner">
-                <div className="left_side common_css">
-                  <div className="contntent address">
-                    <i className="icon-placeholder"></i>
-                    <div className="text">
-                      <small>Location</small>
-                      <span>61W Business Str Hobert, LA </span>
+            {header.map((header, index) => (
+              <div key={index} className="col-lg-12">
+                <div className="top_inner">
+                  <div className="left_side common_css">
+                    <div className="contntent address">
+                      <i className="icon-placeholder"></i>
+                      <div className="text">
+                        <small>Location</small>
+                        <span> {header.location} </span>
+                      </div>
+                    </div>
+                    <div className="contntent email">
+                      <i className="icon-email"></i>
+                      <div className="text">
+                        <small>Email</small>
+                        <Link to={`mailto:${header.email}`}>
+                          {header.email}
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                  <div className="contntent email">
-                    <i className="icon-email"></i>
-                    <div className="text">
-                      <small>Email</small>
-                      <Link to="mailto:sendmail@creote.com">
-                        sendmail@creote.com
-                      </Link>
+                  <div className="right_side common_css">
+                    <div className="contntent phone">
+                      <i className="icon-phone-call"></i>
+                      <div className="text">
+                        <small>Phone</small>
+                        <Link to={`tel:${header.phone}`}>{header.phone}</Link>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div className="right_side common_css">
-                  <div className="contntent phone">
-                    <i className="icon-phone-call"></i>
-                    <div className="text">
-                      <small>Phone</small>
-                      <Link to="tel:+9806071234">+9806071234</Link>
-                    </div>
-                  </div>
-                  <div className="contntent media">
-                    <i className="icon-share"></i>
-                    <div className="text">
-                      <small>Share</small>
-                      <Link to="#" target="_blank" rel="nofollow">
-                        <i className="fa fa-facebook"></i>
-                      </Link>
-                      <Link to="#" target="_blank" rel="nofollow">
-                        <i className="fa fa-twitter"></i>
-                      </Link>
-                      <Link to="#" target="_blank" rel="nofollow">
-                        <i className="fa fa-skype"></i>
-                      </Link>
-                      <Link to="#" target="_blank" rel="nofollow">
-                        <i className="fa fa-telegram"></i>
-                      </Link>
+                    <div className="contntent media">
+                      <i className="icon-share"></i>
+                      <div className="text">
+                        <small>Share</small>
+                        <Link to="#" target="_blank" rel="nofollow">
+                          <i className="fa fa-facebook"></i>
+                        </Link>
+                        <Link to="#" target="_blank" rel="nofollow">
+                          <i className="fa fa-twitter"></i>
+                        </Link>
+                        <Link to="#" target="_blank" rel="nofollow">
+                          <i className="fa fa-skype"></i>
+                        </Link>
+                        <Link to="#" target="_blank" rel="nofollow">
+                          <i className="fa fa-telegram"></i>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
@@ -158,10 +249,7 @@ const Header = () => {
                             </Link>
                           </li>
                           <li className="menu-item  nav-item">
-                            <Link
-                              to="/faqs"
-                              className="dropdown-item nav-link"
-                            >
+                            <Link to="/faqs" className="dropdown-item nav-link">
                               <span>Faq’s</span>
                             </Link>
                           </li>

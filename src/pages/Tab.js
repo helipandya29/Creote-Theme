@@ -1,109 +1,70 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 const imageUrl5 = "assets/images/tab-sec-bg.jpg";
-const imageUrl6 = "assets/images/tab-image.jpg";
-const imageUrl7 = "assets/images/blog-image-8.jpg";
-const imageUrl8 = "assets/images/about-4.jpg";
-const imageUrl9 = "assets/images/about-2.jpg";
-const imageUrl10 = "assets/images/about-3.jpg";
 
 const TabSection = () => {
+    const [activeTab, setActiveTab] = useState(0);
+    const [tab, setTab] = useState([]);
+
+    useEffect(() => {
+        axios
+            .get("http://localhost:5000/api/creote/tab")
+            .then((response) => setTab(response.data))
+            .catch((error) => console.log(error));
+    }, []);
+
+    const handleTabClick = (index) => {
+        setActiveTab(index);
+    };
+
     return (
-        <>
-            {/* <!---tab----> */}
-            <section className="tab-section bg_op_1" style={{ backgroundImage: `url(${imageUrl5})` }}>
-                {/* <!--===============spacing==============--> */}
-                <div className="pd_top_100"></div>
-                {/* <!--===============spacing==============--> */}
-                <div className="container">
-                    <div className="row">
-                        <div className="tabs_all_box  tabs_all_box_start type_one">
-                            <div className="tab_over_all_box">
-                                <div className="tabs_header clearfix">
-                                    <ul className="showcase_tabs_btns nav-pills nav   clearfix">
-                                        <li className="nav-item">
-                                            <a href="/" className="s_tab_btn nav-link active" data-tab="#tabtabone">01. Affordable</a>
+        <section className="tab-section bg_op_1" style={{ backgroundImage: `url(${imageUrl5})` }}>
+            <div className="pd_top_100"></div>
+            <div className="container">
+                <div className="row">
+                    <div className="tabs_all_box tabs_all_box_start type_one">
+                        <div className="tab_over_all_box">
+                            <div className="tabs_header clearfix">
+                                <ul className="showcase_tabs_btns nav-pills nav clearfix">
+                                    {tab.map((data, index) => (
+                                        <li key={index} className="nav-item">
+                                            <a 
+                                                className={`s_tab_btn nav-link ${activeTab === index ? "active" : ""}`} 
+                                                onClick={() => handleTabClick(index)}
+                                            >
+                                                0{index + 1}. {data.title}
+                                            </a>
                                         </li>
-                                        <li className="nav-item">
-                                            <a href="/" className="s_tab_btn nav-link" data-tab="#tabtabtwo">02. Knowledge</a>
-                                        </li>
-                                        <li className="nav-item">
-                                            <a href="/" className="s_tab_btn nav-link" data-tab="#tabtabthree">03. Saves Time</a>
-                                        </li>
-                                        <li className="nav-item">
-                                            <a href="/" className="s_tab_btn nav-link" data-tab="#tabtabtfour">04. Fast &amp; Quality</a>
-                                        </li>
-                                        <li className="nav-item">
-                                            <a href="/" className="s_tab_btn nav-link" data-tab="#tabtabfive">05. Experienced</a>
-                                        </li>
-                                    </ul>
-                                    <div className="toll_free">
-                                        <a href="tel:180667586677"> <i className="icon-phone-call"></i>Call For Free Consultation</a>
-                                    </div>
+                                    ))}
+                                </ul>
+                                <div className="toll_free">
+                                    <a href="tel:180667586677">
+                                        <i className="icon-phone-call"></i>Call For Free Consultation
+                                    </a>
                                 </div>
-                                <div className="s_tab_wrapper">
-                                    <div className="s_tabs_content">
-                                        <div className="s_tab fade active-tab show" id="tabtabone">
-                                            <div className="tab_content one" style={{ backgroundImage: `url(${imageUrl6})` }}>
+                            </div>
+                            <div className="s_tab_wrapper">
+                                <div className="s_tabs_content">
+                                    {tab.map((data, index) => (
+                                        <div key={index} className={`s_tab fade ${activeTab === index ? "active-tab show" : ""}`}>
+                                            <div className="tab_content one" style={{ backgroundImage: `url(${data.imageSrc})` }}>
                                                 <div className="content_image">
-                                                    <h6>Why Creote</h6>
-                                                    <h2>Affordable &amp; Flexible</h2>
-                                                    <p>Must explain too you how all this mistaken idea of denouncing pleasures praising pain was born and we will give you complete account of the system the actual teachings of the great explorer.</p>
+                                                    <h6>{data.heading}</h6>
+                                                    <h2>{data.subHeading}</h2>
+                                                    <p>{data.content}</p>
                                                     <a href="/" target="_blank" rel="nofollow" className="rd_more">Read More <i className="icon-right-arrow"></i></a>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="s_tab fade" id="tabtabtwo">
-                                            <div className="tab_content one" style={{ backgroundImage: `url(${imageUrl7})` }}>
-                                                <div className="content_image">
-                                                    <h6>Why Creote</h6>
-                                                    <h2>Affordable &amp; Flexible</h2>
-                                                    <p>Must explain too you how all this mistaken idea of denouncing pleasures praising pain was born and we will give you complete account of the system the actual teachings of the great explorer.</p>
-                                                    <a href="/" target="_blank" rel="nofollow" className="rd_more">Read More <i className="icon-right-arrow"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="s_tab fade" id="tabtabthree">
-                                            <div className="tab_content one" style={{ backgroundImage: `url(${imageUrl8})` }}>
-                                                <div className="content_image">
-                                                    <h6>Why Creote</h6>
-                                                    <h2>Affordable &amp; Flexible</h2>
-                                                    <p>Must explain too you how all this mistaken idea of denouncing pleasures praising pain was born and we will give you complete account of the system the actual teachings of the great explorer.</p>
-                                                    <a href="/" target="_blank" rel="nofollow" className="rd_more">Read More <i className="icon-right-arrow"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="s_tab fade" id="tabtabtfour">
-                                            <div className="tab_content one" style={{ backgroundImage: `url(${imageUrl9})` }}>
-                                                <div className="content_image">
-                                                    <h6>Why Creote</h6>
-                                                    <h2>Affordable &amp; Flexible</h2>
-                                                    <p>Must explain too you how all this mistaken idea of denouncing pleasures praising pain was born and we will give you complete account of the system the actual teachings of the great explorer.</p>
-                                                    <a href="/" target="_blank" rel="nofollow" className="rd_more">Read More <i className="icon-right-arrow"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="s_tab fade" id="tabtabfive">
-                                            <div className="tab_content one" style={{ backgroundImage: `url(${imageUrl10})` }}>
-                                                <div className="content_image">
-                                                    <h6>Why Creote</h6>
-                                                    <h2>Affordable &amp; Flexible</h2>
-                                                    <p>Must explain too you how all this mistaken idea of denouncing pleasures praising pain was born and we will give you complete account of the system the actual teachings of the great explorer.</p>
-                                                    <a href="/" target="_blank" rel="nofollow" className="rd_more">Read More <i className="icon-right-arrow"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    ))}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                {/* <!--===============spacing==============--> */}
-                <div className="pd_bottom_90"></div>
-                {/* <!--===============spacing==============--> */}
-            </section>
-            {/* <!---tab-end---> */}
-        </>
+            </div>
+            <div className="pd_bottom_90"></div>
+        </section>
     );
 };
 

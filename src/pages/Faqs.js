@@ -1,21 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import SecondHeader from "../components/SecondHeader";
 
 function Faqs() {
+  // State to manage which question is open
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  // Function to toggle the active index
+  const toggleAccordion = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
   return (
-    <div id="content" class="site-content " style={{ marginTop: "100px" }}>
+    <div id="content" className="site-content" style={{ marginTop: "100px" }}>
       <SecondHeader page="Faq's" />
       {/* <!---faq---> */}
-      <section class="faqs-section">
+      <section className="faqs-section">
         {/* <!--===============spacing==============--> */}
-        <div class="pd_top_90"></div>
+        <div className="pd_top_90"></div>
         {/* <!--===============spacing==============--> */}
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="title_all_box style_one text-center dark_color">
-                <div class="title_sections">
-                  <div class="before_title"> Find Useful</div>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="title_all_box style_one text-center dark_color">
+                <div className="title_sections">
+                  <div className="before_title"> Find Useful</div>
                   <h2>Question &amp; Answer</h2>
                   <p>
                     Check our FAQs for quick answers to frequently asked
@@ -24,24 +32,31 @@ function Faqs() {
                   </p>
                 </div>
                 {/* <!--===============spacing==============--> */}
-                <div class="pd_top_15"></div>
+                <div className="pd_top_15"></div>
                 {/* <!--===============spacing==============--> */}
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="faq_section type_two">
-                <div class="block_faq">
-                  <div class="accordion">
+          <div className="row">
+            <div className="col-lg-6">
+              <div className="faq_section type_two">
+                <div className="block_faq">
+                  <div className="accordion">
                     <dl>
-                      <dt class="faq_header active">
+                      <dt
+                        className={`faq_header ${
+                          activeIndex === 0 ? "active" : ""
+                        }`}
+                        onClick={() => toggleAccordion(0)}
+                      >
                         What recruitment services do you offer?
-                        <span class="icon-play"></span>
+                        <span className="icon-play"></span>
                       </dt>
                       <dd
-                        class="accordion-content hide"
-                        style={{ display: "block" }}
+                        className="accordion-content"
+                        style={{
+                          display: activeIndex === 0 ? "block" : "none",
+                        }}
                       >
                         <p>
                           Serenity Is Multi-Faceted Blockchain Based Ecosystem,
@@ -50,11 +65,21 @@ function Faqs() {
                           Production And Smart Energy Grid Utility Services.
                         </p>
                       </dd>
-                      <dt class="faq_header ">
+                      <dt
+                        className={`faq_header ${
+                          activeIndex === 1 ? "active" : ""
+                        }`}
+                        onClick={() => toggleAccordion(1)}
+                      >
                         What sectors or industries do you recruit for?
-                        <span class="icon-play"></span>
+                        <span className="icon-play"></span>
                       </dt>
-                      <dd class="accordion-content hide">
+                      <dd
+                        className="accordion-content"
+                        style={{
+                          display: activeIndex === 1 ? "block" : "none",
+                        }}
+                      >
                         <p>
                           Serenity Is Multi-Faceted Blockchain Based Ecosystem,
                           Energy Retailer For The People, Focusing On The
@@ -62,10 +87,21 @@ function Faqs() {
                           Production And Smart Energy Grid Utility Services.
                         </p>
                       </dd>
-                      <dt class="faq_header ">
-                        How can I register a job?<span class="icon-play"></span>
+                      <dt
+                        className={`faq_header ${
+                          activeIndex === 2 ? "active" : ""
+                        }`}
+                        onClick={() => toggleAccordion(2)}
+                      >
+                        How can I register a job?
+                        <span className="icon-play"></span>
                       </dt>
-                      <dd class="accordion-content hide">
+                      <dd
+                        className="accordion-content"
+                        style={{
+                          display: activeIndex === 2 ? "block" : "none",
+                        }}
+                      >
                         <p>
                           Serenity Is Multi-Faceted Blockchain Based Ecosystem,
                           Energy Retailer For The People, Focusing On The
@@ -78,18 +114,25 @@ function Faqs() {
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
-              <section class="faq_section type_two">
-                <div class="block_faq">
-                  <div class="accordion">
+            <div className="col-lg-6">
+              <section className="faq_section type_two">
+                <div className="block_faq">
+                  <div className="accordion">
                     <dl>
-                      <dt class="faq_header active">
+                      <dt
+                        className={`faq_header ${
+                          activeIndex === 3 ? "active" : ""
+                        }`}
+                        onClick={() => toggleAccordion(3)}
+                      >
                         What sectors or industries do you recruit for?
-                        <span class="icon-play"></span>
+                        <span className="icon-play"></span>
                       </dt>
                       <dd
-                        class="accordion-content hide"
-                        style={{ display: "block" }}
+                        className="accordion-content"
+                        style={{
+                          display: activeIndex === 3 ? "block" : "none",
+                        }}
                       >
                         <p>
                           Blinded by desire, that they cannot foresee the
@@ -100,11 +143,21 @@ function Faqs() {
                           itself is pains but circumstances great
                         </p>
                       </dd>
-                      <dt class="faq_header">
+                      <dt
+                        className={`faq_header ${
+                          activeIndex === 4 ? "active" : ""
+                        }`}
+                        onClick={() => toggleAccordion(4)}
+                      >
                         What recruitment services do you offer?
-                        <span class="icon-play"></span>
+                        <span className="icon-play"></span>
                       </dt>
-                      <dd class="accordion-content hide">
+                      <dd
+                        className="accordion-content"
+                        style={{
+                          display: activeIndex === 4 ? "block" : "none",
+                        }}
+                      >
                         <p>
                           Serenity Is Multi-Faceted Blockchain Based Ecosystem,
                           Energy Retailer For The People, Focusing On The
@@ -112,11 +165,21 @@ function Faqs() {
                           Production And Smart Energy Grid Utility Services.
                         </p>
                       </dd>
-                      <dt class="faq_header">
+                      <dt
+                        className={`faq_header ${
+                          activeIndex === 5 ? "active" : ""
+                        }`}
+                        onClick={() => toggleAccordion(5)}
+                      >
                         Where will you advertise my job vacancy?
-                        <span class="icon-play"></span>
+                        <span className="icon-play"></span>
                       </dt>
-                      <dd class="accordion-content hide">
+                      <dd
+                        className="accordion-content"
+                        style={{
+                          display: activeIndex === 5 ? "block" : "none",
+                        }}
+                      >
                         <p>
                           Serenity Is Multi-Faceted Blockchain Based Ecosystem,
                           Energy Retailer For The People, Focusing On The
@@ -132,7 +195,7 @@ function Faqs() {
           </div>
         </div>
         {/* <!--===============spacing==============--> */}
-        <div class="pd_bottom_60"></div>
+        <div className="pd_bottom_60"></div>
         {/* <!--===============spacing==============--> */}
       </section>
       {/* <!---faqs---> */}
