@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+// import $ from "jquery";
 
 const Slider = () => {
   const [users, setUsers] = useState([]);
-                                          
+  const $ = window.$;
+
   useEffect(() => {
     axios
       .get("http://localhost:5000/api/creote/getSpecificSlider")
