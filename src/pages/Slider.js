@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-// import $ from "jquery";
+import $ from "jquery";
 
 const Slider = () => {
   const [users, setUsers] = useState([]);
@@ -81,7 +81,13 @@ const Slider = () => {
                       <div className="slider_image">
                         <img
                           src={user.sliderImg}
-                          className="img-fluid"
+                          className="polygon-shape"
+                          style={{
+                            "clip-path": "circle(52.7% at 80% 60%)",
+                            "padding-top": "150px",
+                            width: "250vh",
+                            height: "110vh",
+                          }}
                           alt="slider"
                         />
                       </div>
