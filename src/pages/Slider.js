@@ -58,7 +58,9 @@ const Slider = () => {
               <div className="slide-item-content content_left">
                 <div
                   className="image-layer"
-                  style={{ backgroundImage: `url(${user.imageSrc})` }}
+                  style={{
+                    backgroundImage: `url(${user.imageSrc})`,
+                  }}
                 ></div>
                 <div className="auto-container">
                   <div className="d-flex align-items-center">
@@ -77,17 +79,25 @@ const Slider = () => {
                         </a>
                       </div>
                     </div>
-                    <div className="col-lg-5 col-md-12  col-sm-12 col-xs-12 image_column">
+                    <div className="col-lg-5 col-md-12 col-sm-12 col-xs-12 image_column">
                       <div className="slider_image">
                         <img
                           src={user.sliderImg}
                           className="polygon-shape"
-                          style={{
-                            "clip-path": "circle(52.7% at 80% 60%)",
-                            "padding-top": "150px",
-                            width: "250vh",
-                            height: "110vh",
-                          }}
+                          // style={{
+                          //   width: "250vh",
+                          //   height: "119vh",
+                          //   objectFit: "cover",
+                          //   // borderRadius: "20px", // Rounded corners for browsers that don't support clip-path
+                          //   // clipPath:
+                          //   //   "polygon(100% 0%, 100% 50%, 100% 100%, 46% 100%, 0% 50%, 47% 0)",
+                          //   // borderRadius: " 100% 0% 100% 0% / 49% 37% 63% 51% ",
+                          //   // borderRadius: " 100% 0% 0% 100% / 44% 30% 70% 56% ",
+                          //   // borderRadius: " 100% 0% 0% 100% / 44% 51% 49% 56% ",
+                          //   // borderRadius: "99% 1% 100% 0% / 88% 100% 0% 12%  ",
+                          //   // borderRadius:
+                          //   // " 100% 0% 0% 100% / 39% 71% 29% 61%  ",
+                          // }}
                           alt="slider"
                         />
                       </div>
