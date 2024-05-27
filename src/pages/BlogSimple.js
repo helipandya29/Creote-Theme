@@ -1,8 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import SecondHeader from "../components/SecondHeader";
 import { Link } from "react-router-dom";
 
 const BlogSimple = () => {
+  const [blog, setBlog] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/api/user/blog")
+      .then((response) => {
+        setBlog(response.data);
+        setLoading(false);
+      })
+      .catch((error) => console.log(error));
+  });
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+  const formatDate = (dateString) => {
+    const options = { year: "numeric", month: "long", day: "numeric" };
+    return new Date(dateString).toLocaleDateString(undefined, options);
+  };
+
   return (
     <div id="content" className="site-content" style={{ marginTop: "100px" }}>
       <SecondHeader page="Blog Simple" />
@@ -14,294 +35,48 @@ const BlogSimple = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="grid_show_case grid_layout clearfix">
-                <div className="news_box style_six grid_box _card has_images">
-                  <div className="content_box">
-                    <div className="overlay"> </div>
-                    <img
-                      src="assets/images/blog-image-9.jpg"
-                      className="img-fluid"
-                      alt="img"
-                    />
-                    <div className="category">
-                      <Link to="/" className="categories">
-                        <i className="icon-folder"></i>Coaching
-                      </Link>
-                    </div>
-                    <div className="content_mid">
-                      <span className="date_in_number">October 8, 2023</span>
-                      <h2 className="title">
-                        <Link to="/blogSinglePost" rel="bookmark">
-                          Why Should Business Payroll Outsourcing?
-                        </Link>
-                      </h2>
-                    </div>
-                    <div className="auhtour_box">
+                {blog.map((data) => (
+                  <div className="news_box style_six grid_box _card has_images">
+                    <div className="content_box">
+                      <div className="overlay"> </div>
                       <img
-                        alt="img"
-                        src="assets/images/auth-1.png"
-                        height="60"
-                        width="60"
+                        src={data.imageSrc}
                         className="img-fluid"
+                        alt="img"
                       />
-                      <div className="contnet_a">
-                        <p>POSTED BY</p>
-                        <h4> Evan Thomas </h4>
+                      <div className="category">
+                        <Link to="/" className="categories">
+                          <i className="icon-folder"></i>
+                          {data.imageTitle}
+                        </Link>
+                      </div>
+                      <div className="content_mid">
+                        <span className="date_in_number">
+                          {" "}
+                          {formatDate(data.date)}
+                        </span>
+                        <h2 className="title">
+                          <Link to="/blogSinglePost" rel="bookmark">
+                            {data.heading}
+                          </Link>
+                        </h2>
+                      </div>
+                      <div className="auhtour_box">
+                        <img
+                          alt="img"
+                          src={data.profilePic}
+                          height="60"
+                          width="60"
+                          className="img-fluid"
+                        />
+                        <div className="contnet_a">
+                          <p>POSTED BY</p>
+                          <h4> {data.name} </h4>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div className="news_box style_six grid_box _card  has_images">
-                  <div className="content_box">
-                    <div className="overlay"> </div>
-                    <img
-                      src="assets/images/blog-image-8.jpg"
-                      className="img-fluid"
-                      alt="img"
-                    />
-                    <div className="category">
-                      <Link to="/blogSinglePost" className="categories">
-                        <i className="icon-folder"></i>HR Consulting
-                      </Link>
-                    </div>
-                    <div className="content_mid">
-                      <span className="date_in_number">October 8, 2023</span>
-                      <h2 className="title">
-                        <Link to="/blogSinglePost" rel="bookmark">
-                          Most Employees Support Measures
-                        </Link>
-                      </h2>
-                    </div>
-                    <div className="auhtour_box">
-                      <img
-                        alt="img"
-                        src="assets/images/auth-1.png"
-                        height="60"
-                        width="60"
-                        className="img-fluid"
-                      />
-                      <div className="contnet_a">
-                        <p>POSTED BY</p>
-                        <h4> Evan Thomas </h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="news_box style_six grid_box _card has_images">
-                  <div className="content_box">
-                    <div className="overlay"> </div>
-                    <img
-                      src="assets/images/blog-image-7.jpg"
-                      className="img-fluid"
-                      alt="img"
-                    />
-                    <div className="category">
-                      <Link to="/blogSinglePost" className="categories">
-                        <i className="icon-folder"></i>Compliance Audits
-                      </Link>
-                    </div>
-                    <div className="content_mid">
-                      <span className="date_in_number">October 8, 2023</span>
-                      <h2 className="title">
-                        <Link to="/blogSinglePost" rel="bookmark">
-                          How to Handle Employee
-                        </Link>
-                      </h2>
-                    </div>
-                    <div className="auhtour_box">
-                      <img
-                        alt="img"
-                        src="assets/images/auth-1.png"
-                        height="60"
-                        width="60"
-                        className="img-fluid"
-                      />
-                      <div className="contnet_a">
-                        <p>POSTED BY</p>
-                        <h4> Evan Thomas </h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="news_box style_six grid_box _card has_images">
-                  <div className="content_box">
-                    <div className="overlay"> </div>
-                    <img
-                      src="assets/images/blog-image-6.jpg"
-                      className="img-fluid"
-                      alt="img"
-                    />
-                    <div className="category">
-                      <Link to="/blogSinglePost" className="categories">
-                        <i className="icon-folder"></i>Coaching
-                      </Link>
-                    </div>
-                    <div className="content_mid">
-                      <span className="date_in_number">October 8, 2023</span>
-                      <h2 className="title">
-                        <Link to="/blogSinglePost" rel="bookmark">
-                          Retaining Good Employees &amp; Motivated
-                        </Link>
-                      </h2>
-                    </div>
-                    <div className="auhtour_box">
-                      <img
-                        alt="img"
-                        src="assets/images/auth-1.png"
-                        height="60"
-                        width="60"
-                        className="img-fluid"
-                      />
-                      <div className="contnet_a">
-                        <p>POSTED BY</p>
-                        <h4> Roman Brayden </h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="news_box style_six grid_box _card has_images">
-                  <div className="content_box">
-                    <div className="overlay"> </div>
-                    <img
-                      src="assets/images/blog-image-5.jpg"
-                      className="img-fluid"
-                      alt="img"
-                    />
-                    <div className="category">
-                      <Link to="/blogSinglePost" className="categories">
-                        <i className="icon-folder"></i>Compliance Audits
-                      </Link>
-                    </div>
-                    <div className="content_mid">
-                      <span className="date_in_number">October 8, 2023</span>
-                      <h2 className="title">
-                        <Link to="/blogSinglePost" rel="bookmark">
-                          Understanding Executive Coaching
-                        </Link>
-                      </h2>
-                    </div>
-                    <div className="auhtour_box">
-                      <img
-                        alt="img"
-                        src="assets/images/auth-1.png"
-                        height="60"
-                        width="60"
-                        className="img-fluid"
-                      />
-                      <div className="contnet_a">
-                        <p>POSTED BY</p>
-                        <h4> Evan Thomas </h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="news_box style_six grid_box _card has_images">
-                  <div className="content_box">
-                    <div className="overlay"> </div>
-                    <img
-                      src="assets/images/blog-image-4.jpg"
-                      className="img-fluid"
-                      alt="img"
-                    />
-                    <div className="category">
-                      <Link to="/blogSinglePost" className="categories">
-                        <i className="icon-folder"></i>Coaching
-                      </Link>
-                    </div>
-                    <div className="content_mid">
-                      <span className="date_in_number">October 8, 2023</span>
-                      <h2 className="title">
-                        <Link to="/blogSinglePost" rel="bookmark">
-                          How to Handle Your Good Employee
-                        </Link>
-                      </h2>
-                    </div>
-                    <div className="auhtour_box">
-                      <img
-                        alt="img"
-                        src="assets/images/auth-2.png"
-                        height="60"
-                        width="60"
-                        className="img-fluid"
-                      />
-                      <div className="contnet_a">
-                        <p>POSTED BY</p>
-                        <h4> Roman Brayden </h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="news_box style_six grid_box _card has_images">
-                  <div className="content_box">
-                    <div className="overlay"> </div>
-                    <img
-                      src="assets/images/blog-image-3.jpg"
-                      className="img-fluid"
-                      alt="img"
-                    />
-                    <div className="category">
-                      <Link to="/blogSinglePost" className="categories">
-                        <i className="icon-folder"></i>Employee Relations
-                      </Link>
-                    </div>
-                    <div className="content_mid">
-                      <span className="date_in_number">October 8, 2023</span>
-                      <h2 className="title">
-                        <Link to="/blogSinglePost" rel="bookmark">
-                          Workforce Challenges &amp; Opportunities
-                        </Link>
-                      </h2>
-                    </div>
-                    <div className="auhtour_box">
-                      <img
-                        alt="img"
-                        src="assets/images/auth-1.png"
-                        height="60"
-                        width="60"
-                        className="img-fluid"
-                      />
-                      <div className="contnet_a">
-                        <p>POSTED BY</p>
-                        <h4> Evan Thomas </h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="news_box style_six grid_box _card has_images">
-                  <div className="content_box">
-                    <div className="overlay"> </div>
-                    <img
-                      src="assets/images/blog-image-11.jpg"
-                      className="img-fluid"
-                      alt="img"
-                    />
-                    <div className="category">
-                      <Link to="/blogSinglePost" className="categories">
-                        <i className="icon-folder"></i>Coaching
-                      </Link>
-                    </div>
-                    <div className="content_mid">
-                      <span className="date_in_number">October 8, 2023</span>
-                      <h2 className="title">
-                        <Link to="/blogSinglePost" rel="bookmark">
-                          Workplace problems in your business?
-                        </Link>
-                      </h2>
-                    </div>
-                    <div className="auhtour_box">
-                      <img
-                        alt="img"
-                        src="assets/images/auth-1.png"
-                        height="60"
-                        width="60"
-                        className="img-fluid"
-                      />
-                      <div className="contnet_a">
-                        <p>POSTED BY</p>
-                        <h4> Evan Thomas </h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>

@@ -667,7 +667,7 @@ const BlogSinglePost = () => {
                       data-swiper='{
                                    "loop": true,
                                     "autoplay" : { "delay":"" },
-                                    "speed":1000,
+                                    "speed":5000,
                                     "centeredslides": false,
                                     "slidesperview": 2,
                                      "spacebetween": 30,
